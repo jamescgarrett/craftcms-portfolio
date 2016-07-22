@@ -1,0 +1,10 @@
+*.log
+
+*sublime*
+
+# Dependencies
+_dev/node_modules
+_craftcms/storage
+
+# Public 
+dist/uploads

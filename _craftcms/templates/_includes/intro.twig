@@ -1,0 +1,18 @@
+{% cache unless not craft.config.cache %}
+	{% if entry is defined %}
+		{% set content = entry.introContent.first() %}
+		{% set hero = content.introBackground.first() %}
+		{% set title = content.introTitle %}
+		{% set description = content.introDescription %}
+		{% set light = content.introLightText %}
+	{% endif %}
+	<div class="intro row row--middle row--center row--startsm row--nomargin{% if classes is defined %} {{classes}}{% endif %}" style="background-image: url('{{hero.getUrl()}}');">
+		{% if introHeader %}
+			<div class="intro-content col--12 col--7sm">
+				<p{% if light %} class="white"{% endif %}>{{description|nl2br|raw}}</p>
+				<h1{% if light %} class="white"{% endif %}>{{title}}</h1>
+			</div>
+		{% endif %}
+		{% if full %}<img class="intro-scrollIndicator js-intro-scrollIndicator" src="{{siteUrl}}src/images/scroll-down.svg" alt="Scroll Down" />{% endif %}
+	</div>
+{% endcache %}

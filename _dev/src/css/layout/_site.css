@@ -1,0 +1,49 @@
+.siteContainer{
+    height: 100%;
+    width: 100%;
+
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.siteContainer-content{
+    animation: fade-in 1s;
+
+    overflow: hidden;
+
+    min-height: 100%;
+    margin-bottom: -var(--footer-base-height);
+}
+
+.siteContainer-content::after{
+    content: "";
+    display: block;
+    height: var(--footer-base-height);
+}
+
+.siteBorder{
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    height: 20px;
+
+    background-color: white;
+}
+.siteBorder--top{
+    top: 0;
+}
+.siteBorder--bottom{
+    bottom: 0;
+}
+
+/*
+ *  Browser Upgrade
+ */
+.siteBrowserUpgrade {
+    margin: 0.2em 0;
+    background: red;
+    color: black;
+    padding: 0.2em 0;
+}

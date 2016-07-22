@@ -1,0 +1,65 @@
+.footer{
+    margin-top: 15px;
+    
+    background: #1C1B21 url('../images/footer-mountains.png') bottom no-repeat;
+    background-size: 400% auto;
+
+    @media (--screen-xs-min) {
+        background-size: 250% auto;
+    }
+
+    @media (--screen-sm-min) {
+        background-size: 100% auto;
+    }
+}
+
+.footer-contentContainer{
+    background: linear-gradient(to bottom, rgb(40, 40, 40), rgb(40, 40, 40) 40%, transparent 60%, transparent);
+    background-size: 100% 5px;
+}
+
+.footer-content{
+    margin-bottom: 35px;
+}
+
+.footer-column{
+    margin-bottom: 25px;
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+
+    @media (--screen-sm-min) {
+        margin-bottom: 0;
+    }
+}
+
+.footer-column h4{
+    color: white;
+    line-height: 0.5;
+}
+
+.footer-column p,
+.footer-column address{
+    margin: 0;
+
+    color: white;
+    font-size: 1.3rem;
+}
+
+.footer-column a{
+    color: white;
+}
+
+.footer-column a:hover{
+    color: var(--brand-primary);
+}
+
+.footer-bottom{
+    padding-bottom: 25px;
+}
+
+.footer-copyright{
+    font-size: 1.2rem;
+    color: white;
+}

@@ -1,0 +1,69 @@
+.page-halfSection{
+    height: 100vh;
+}
+
+.page-textColumn{
+    height: 100vh;
+
+    background-color: var(--gray-darker);
+}
+
+.page-textColumn-header{
+    padding-left: 30px;
+
+    border-left: 2px solid var(--brand-primary);
+
+    text-align: left;
+}
+
+.page-textColumn-header h1,
+.page-textColumn-header p{
+    margin: 0;
+
+    color: white;
+    line-height: 1;
+}
+.page-textColumn-header p{
+    margin-top: 10px;
+}
+
+.page-textColumn-info{
+    margin-top: 25px;
+    padding-left: 32px;
+
+    text-align: left;
+}
+.page-textColumn-tech{
+    margin-bottom: 25px;
+
+    color: white;
+}
+
+.page-textColumn-info a{
+    color: white;
+    text-decoration: underline;
+    font-weight: var(--font-bold-weight);
+}
+
+.page-imageColumn{
+    height: 100vh;
+}
+
+.page-imageColumn--feliz-restaurants{
+    background: rgb(250, 142, 36); /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left top, rgb(250, 142, 36), rgb(172, 8, 8)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, rgb(250, 142, 36), rgb(172, 8, 8)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, rgb(250, 142, 36), rgb(172, 8, 8)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, rgb(250, 142, 36), rgb(172, 8, 8)); /* Standard syntax */
+}
+
+.page-imageColumn--invisible-sentinel{
+    background: rgb(250, 142, 36); /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left top, rgb(12, 66, 122), rgb(32, 138, 143)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, rgb(12, 66, 122), rgb(32, 138, 143)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, rgb(12, 66, 122), rgb(32, 138, 143)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, rgb(12, 66, 122), rgb(32, 138, 143)); /* Standard syntax */
+}
+
+
+

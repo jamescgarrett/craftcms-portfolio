@@ -1,0 +1,68 @@
+/*
+ *  Text Alignement
+ */
+@define-placeholder alignleft {
+  text-align: left; 
+}
+
+@define-placeholder alignright {
+  text-align: right; 
+}
+
+@define-placeholder aligncenter {
+  text-align: center; 
+}
+
+@define-placeholder alignjustify {
+  text-align: justify; 
+}
+
+/*
+ *  Text
+ */
+@define-placeholder capitalize{
+    text-transform: uppercase;
+}
+
+/*
+ *  Text
+ */
+ @define-placeholder unstyledlist{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/*
+ *  Visibility
+ */
+@define-placeholder hidden{
+    display: none !important;
+}
+@define-placeholder invisible{
+    opacity: 0;
+}
+@define-placeholder visible{
+    opacity: 1;
+}
+.hidden{
+    display: none !important;
+}
+
+.invisible{
+  visibility: hidden;
+}
+
+/*
+ *  Screen Readers Only
+ */
+.srOnly{
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0,0,0,0);
+	border: 0;
+}

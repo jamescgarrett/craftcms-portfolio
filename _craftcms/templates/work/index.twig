@@ -1,0 +1,28 @@
+{% extends '_layouts/site' %}
+
+{% set entries = craft.entries.section('work').type('work') %}
+
+{% block main %}
+    {% set vars = {
+        'hero': defaultImages.defaultWorkHero.first(),
+        'title': 'Work',
+        'description': '',
+        'classes': 'intro--shortest js-intro--shortest',
+        'introHeader': true,
+        'full': false,
+        'light': defaultImages.workHeroLightText
+    } %}
+    {% include '_includes/intro' with vars %}
+
+    <div class="workList row wow">
+        {% cache unless not craft.config.cache %}
+            {% for post in entries %}
+                {% set vars = {
+                    post: post,
+                    classes: 'workList-item--featured col--12 col--6sm'
+                } %}
+                {% include '_includes/work-loop' with vars %}
+            {% endfor %}
+        {% endcache %}
+    </div>
+{% endblock %}

@@ -1,0 +1,95 @@
+:root {
+    --brand-primary:    rgb(33, 125, 164);
+
+    --gray-darker:      rgb(24, 24, 24);
+    --gray-dark:        rgb(24, 42, 49);
+    --gray:             rgb(85, 85, 85);
+    --gray-light:       rgb(195, 189, 184);
+    --gray-lighter:     rgb(241, 240, 237);
+    --gray-lightest:    rgb(241, 241, 241);
+
+    --error-color:      red;
+    --success-color:    green;
+
+    --body-bg:          white;
+
+    --text-selection-color:          var(--brand-primary);
+    --text-base-color:               var(--gray-dark);
+
+    --link-base-color:               var(--gray-dark);
+    --link-base-color-hover:         var(--brand-primary);
+    --link-base-decoration:          none;
+    --link-base-decoration-hover:    none;
+
+    --font-base-family:   'Merriweather', serif;
+    --font-base-weight:   300;
+    --font-bold-weight:   700;
+
+    --line-height-base:   1.6;
+    --letter-spacing-base: normal;
+
+    --paragraph-base-margin-bottom:   1rem;
+    --paragraph-base-margin-top:      0.5rem;
+
+    --headings-base-font-family:       var(--font-base-family);
+    --headings-base-font-weight:       var(--font-base-weight);
+    --headings-base-line-height:       1.2;
+    --headings-base-letter-spacing:     normal;
+    --headings-base-margin-bottom:     1rem;
+
+    --btn-base-color:         white;
+    --btn-base-color-hover:   white;
+    --btn-base-letter-spacing: 0;
+    --btn-base-case:           uppercase;
+    --btn-base-font-family:    var(--font-base-family);
+    --btn-base-font-weight:    var(--font-bold-weight);
+    --btn-base-font-size:    1.6rem;
+    --btn-base-bg:            rgba(0, 0, 0, 0.5);
+    --btn-base-bg-hover:      transparent;
+    --btn-base-border:      3px solid white;
+    --btn-base-border-hover: 0;
+    --btn-base-border-radius: 0;
+    --btn-base-padding-height:      15px;
+    --btn-base-padding-width:       25px;
+    --btn-base-height:         auto;
+
+    --input-base-color:         var(--text-base-color);
+    --input-base-bg:            white;
+    --input-base-bg-focus:      white;
+    --input-base-border:              2px solid white;
+    --input-base-border-focus:        2px solid var(--brand-primary);
+    --input-base-border-radius: 0;
+    --input-base-placeholder-color:   var(--gray);
+    --input-base-padding-height:      10px;
+    --input-base-padding-width:       15px;
+    --input-base-height:         auto;
+    --input-base-font-size: 1.4rem;
+
+    --table-base-border:              1px solid #f1f1f1;
+    --table-base-bg:                  #fefefe;
+    --table-base-bg-even:             #ccc;
+    --table-base-headfoot-padding:   10px 10px;
+    --table-base-padding:             10px 10px;
+
+    --page-base-padding: 55px;
+    --page-content-padding: 55px;
+
+    --grid-base-gutter: 0.1em;
+    --grid-base-gutter--double: calc(var(--grid-base-gutter) * 2);
+    --grid-base-gutter--triple: calc(var(--grid-base-gutter) * 3);
+    --grid-base-row-spacing: var(--page-content-padding);
+
+    --footer-base-height: 200px;
+
+    --screen-xs-min-grid: 31.750em;
+    --screen-sm-min-grid: 47em;
+    --screen-md-min-grid: 63em;
+    --screen-lg-min-grid: 99.000em;
+    --screen-max:    112.500em;
+
+    @custom-media --screen-xs-min (min-width: 33.750em);
+    @custom-media --screen-sm-min (min-width: 48em);
+    @custom-media --screen-md-min (min-width: 64em);
+    @custom-media --screen-lg-min (min-width: 100.000em);
+    @custom-media --screen-max (min-width: 112.500em);
+}

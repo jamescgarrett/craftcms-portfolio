@@ -1,0 +1,14 @@
+<div class="socialFeeds-instagram-container grid-row">
+    <div class="socialFeeds-loading"></div>
+</div>
+{% verbatim %}
+	<script type="x-tmpl-mustache" id="socialFeeds-instagram">
+		{{#feed}}
+			<div class="grid-col--xxs12 grid-col--xs6">
+				<div class="socialFeeds-instagram">
+					<a href="https://www.instagram.com/{{#settings}}{{instagramUsername}}{{/settings}}" target="_blank"><img src="{{image}}" alt="Community Bikes and Boards" /></a>
+				</div>
+			</div>
+		{{/feed}}
+	</script>
+{% endverbatim %}

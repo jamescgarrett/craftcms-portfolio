@@ -1,0 +1,28 @@
+.header{
+    position: fixed;
+    z-index: 500;
+    top: 0;
+
+    width: 100%;
+    height: 80px;
+
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+
+    user-select: none;
+}
+
+.header--scrolling .navToggle span{
+    background-color: var(--gray-dark);
+}
+
+.header--scrolling .logo,
+.header--scrolling .navToggle{
+    margin-top: 35px;
+    background-color: white;
+}
+
+.header--scrolling .logo-svg{
+    background: transparent url('data:image/svg+xml;utf8,<svg width="21px" height="24px" viewBox="0 0 21 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-36.000000, -35.000000)" fill="%23383431"><g transform="translate(36.000000, 35.000000)"><path d="M13.1462146,7.01772518 C11.3540366,7.01772518 8.022456,7.02145646 8.022456,7.02145646 L8.00810307,-1.10710726e-16 L0,-1.10710726e-16 L0,4.02784908 L2.99744199,4.02784872 L2.99744194,23.9999991 L8.00810307,23.9999991 L8.00810287,11.0349146 L11.1022414,11.0324277 C12.3977156,11.0324277 12.9323357,11.6331644 12.9323357,13.1704534 L12.9493079,23.9999997 L21,24 L20.9612636,19.9763726 L18.0523794,19.9763726 L18.0523794,12.3743358 C18.0523794,9.37189593 16.880972,7.01772518 13.1462146,7.01772518 Z" id="humid-logo-path"></path></g></g></g></svg>') no-repeat;
+}

@@ -1,0 +1,43 @@
+{% extends "_layouts/site" %}
+
+{% set entries = craft.entries.section('work').type('archive') %}
+{% set categories = craft.categories.group('workCategory') %}
+
+{% block main %}
+	
+    {% set vars = {
+        'hero': defaultImages.defaultWorkArchiveHero.first(),
+        'title': 'Archive',
+        'description': 'Some hard coded description here',
+        'classes': 'intro--shortest js-intro--shortest',
+        'introHeader': true,
+        'full': false,
+        'light': defaultImages.workArchiveHeroLightText
+    } %}
+    {% include '_includes/intro' with vars %}
+
+    <ul class="workList-filter wow">
+    	<li class="workList-filter-item workList-filter-item-is-active js-workList-filter-item" data-category="all">{{"All" | t }}</li>
+        {% for category in categories %}
+        	<li class="workList-filter-item js-workList-filter-item" data-category="{{macros.lowercase_replace_space(category.title)}}">{{ category.title }}</li>
+    	{% endfor %}
+    </ul>
+
+    <div class="workList row wow">
+         {% cache unless not craft.config.cache %}
+            {% for post in entries %}
+                {% if post.category|length %}
+                    {% set categoryClass = "" %}
+                    {% for category in post.category %} 
+                        {% set categoryClass = categoryClass ~ " " ~ macros.lowercase_replace_space(category.title) %}
+                    {% endfor %}
+                {% endif %}
+                {% set vars = {
+                    post: post,
+                    classes: 'workList-item--archive col--12 col--6xs col--3sm' ~ categoryClass
+                } %}
+                {% include '_includes/work-loop' with vars %}
+            {% endfor %}
+        {% endcache %}
+    </div>
+{% endblock %}

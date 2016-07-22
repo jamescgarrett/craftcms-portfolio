@@ -1,0 +1,119 @@
+[type='text'], 
+[type='password'], 
+[type='date'], 
+[type='datetime'], 
+[type='datetime-local'], 
+[type='month'], 
+[type='week'], 
+[type='email'], 
+[type='number'], 
+[type='search'], 
+[type='tel'], 
+[type='time'], 
+[type='url'], 
+[type='color'],
+textarea {
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; 
+
+    transition: border-color 0.25s ease-in-out;
+
+    display: block;
+    width: 100%;
+    height: var(--input-base-height);
+    
+    padding: var(--input-base-padding-height) var(--input-base-padding-width);
+
+    border: var(--input-base-border);
+    background-color: var(--input-base-bg);
+    border-radius: var(--input-base-border-radius);
+
+    font-family: inherit;
+    font-size: var(--input-base-font-size);
+    color: var(--input-base-color);
+}
+
+[type='text']:focus, 
+[type='password']:focus, 
+[type='date']:focus, 
+[type='datetime']:focus, 
+[type='datetime-local']:focus, 
+[type='month']:focus, 
+[type='week']:focus, 
+[type='email']:focus, 
+[type='number']:focus, 
+[type='search']:focus, 
+[type='tel']:focus, 
+[type='time']:focus, 
+[type='url']:focus, 
+[type='color']:focus,
+textarea:focus{
+    transition: border-color 0.25s ease-in-out;
+
+    border: var(--input-base-border-focus);
+    background-color: var(--input-base-bg-focus);
+    outline: none;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    width: 100%;
+    height: 50px;
+    padding: 0 var(--input-base-padding-width);
+
+    border: var(--input-base-border);
+    border-radius: 0px;
+
+    text-indent: 0.01px;
+    text-overflow: '';
+    font-size: inherit;
+    font-family: inherit;
+    line-height: normal;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder{
+    color: var(--input-base-placeholder-color);
+    opacity: 1;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder{
+    color: var(--input-base-placeholder-color);
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder{
+    color: var(--input-base-placeholder-color);
+}
+
+textarea {
+    height: auto;
+    max-width: 100%;
+    min-height: 65px;
+    resize: vertical;
+}
+
+textarea[rows] {
+    height: auto; 
+}
+
+select {
+    width: 100%;
+}
+
+label{
+    display: block;
+    margin-bottom: 5px;
+
+    font-size: 1.3rem;
+}
+
+fieldset{
+    padding: 0;
+    border: 0;
+}

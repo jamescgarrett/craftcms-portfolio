@@ -1,0 +1,26 @@
+<aside class="sidebar grid-col--xxs12 grid-col--sm4 grid-col--gutterLeftTripleSm">
+    {% if craft.entries.section('event')|length %}
+		<div class="sidebar-widget">
+	    	<h3>{{'Upcoming Events' |t}}</h3>
+	    	<span class="u-bar u-bar--red"></span>
+		    <ul class="sidebar-widget-list u-unstyledList">
+				{% cache globally unless not craft.config.cache %}
+                    {% set posts = craft.entries.section('event').limit(5) %}
+                    {% set i = 0 %}
+                    {% for post in posts %}
+                    	{% if post.date|date('U') >= 'now'|date('U') %}
+                    		{% set i = i + 1 %}
+                        	<li class="sidebar-widget-item"><a href="{{post.url}}">{{post.title}}</a></li>
+                    	{% endif %}
+                    	{% if loop.last and i < 1 %}
+                    		<li class="sidebar-widget-item">{{"No Upcoming Events..."|t}}</li>
+                    	{% endif %}
+                    	{% if loop.last and i >= 1 %}
+                    		<li class="sidebar-widget-item"><a href="{{url('events')}}"><strong>{{"All upcoming events"|t}}</strong></a></li>
+                    	{% endif %}
+                    {% endfor %}
+                {% endcache %}
+			</ul>
+		</div>
+	{% endif %}
+</aside>

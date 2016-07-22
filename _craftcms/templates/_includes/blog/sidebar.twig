@@ -1,0 +1,39 @@
+<aside class="sidebar grid-col--xxs12 grid-col--sm4 grid-col--gutterLeftTripleSm">
+	{% if craft.entries.section('blog')|length %}
+    	<div class="sidebar-widget">
+    		<h3>{{'Recent Posts' |t}}</h3>
+    		<span class="u-bar u-bar--red"></span>
+	        <ul class="sidebar-widget-list u-unstyledList">
+	        	{% cache globally unless not craft.config.cache %}
+                    {% set posts = craft.entries.section('blog').limit(5) %}
+                    {% for post in posts %}
+                        <li class="sidebar-widget-item"><a href="{{post.url}}">{{post.title}}</a></li>
+                    {% endfor %}
+                {% endcache %}
+	        </ul>
+	    </div>
+	{% endif %}
+
+	<div class="sidebar-widget">
+		<h3>{{'Archives' |t}}</h3>
+		<span class="u-bar u-bar--red"></span>
+        <ul class="sidebar-widget-list u-unstyledList">
+			{% set allEntries = craft.entries.section('blog').limit(null) %}
+			{% for date, entries in allEntries | group("postDate|date('F Y')") %}
+			    <li class="sidebar-widget-item"><a href="{{ siteUrl }}blog/archive/{{date |date('m')}}/{{date |date('Y')}}">{{ date }} ({{ allEntries |length }})</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+
+	{% if craft.categories.group('blogCategories')|length %}
+		<div class="sidebar-widget">
+	    	<h3>{{'Categories' |t}}</h3>
+	    	<span class="u-bar u-bar--red"></span>
+		    <ul class="sidebar-widget-list u-unstyledList">
+				{% nav category in craft.categories.group('blogCategories') %}
+					<li class="sidebar-widget-item"><a href="{{ category.url }}">{{ category.title }}</a></li>
+				{% endnav %}
+			</ul>
+		</div>
+	{% endif %}
+</aside>

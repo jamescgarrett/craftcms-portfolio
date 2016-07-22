@@ -1,0 +1,53 @@
+{% extends '_layouts/site' %}
+
+{% block main %}
+	{% cache unless not craft.config.cache %}
+	    <div class="sitePage">
+            <div class="image image--fullWidth image--main image--mainDefault">
+                <div class="grid grid--contained">
+                    <div class="image--main grid-row grid-row--middleXxs">
+                        <div class="grid-col--xxs12">
+                            <h1 class="u-blockText u-blockText--red">{{entry.type|title}}</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+	        <article class="grid grid--contained u-contentPadding">
+	            <div class="grid-row">
+	                <div class="grid-col--xxs12 grid-col--sm8 grid-col--gutterRightTripleSm">
+						<article class="sitePost">
+	                		<h2>{{entry.title}}</h2>
+	                		<span class="u-bar u-bar--red"></span>
+	                		{% if entry.type == 'blog' %}
+	                    		<p class="sitePost-date post-date">{{ entry.postDate|date('F d, Y') }}</p>
+	                    	{% else %}
+	                    		<p class="sitePost-date post-date">{{ entry.date|date('F d, Y h:i a') }}</p>
+	                    	{% endif %}
+
+
+	                    	{% set image = entry.image.first() %}
+        					{% if image %}
+        						<div class="sitePost-image">
+	                    			{{ macros.responsive_image(image, { transformMode: 'fit' }) }}
+	                    		</div>
+	                    	{% endif %}
+
+	                    	<div class="sitePost-body">
+								{{entry.body}}
+							</div>
+
+							{% if entry.type == 'event' and entry.externalLink|length %}
+								<a class="sitePost-button button" href="{{entry.externalLink }}" target="_blank">{{'Check it Out!'|t}}</a>
+							{% endif %}
+						</article>
+	                </div>
+	                {% if entry.type == 'blog' %}
+	                	{% include '_includes/blog/sidebar' %}
+	                {% else %}
+	                	{% include '_includes/blog/sidebar-events' %}
+	                {% endif %}
+	            </div>
+	        </article>
+	    </div>
+	{% endcache %}
+{% endblock %}

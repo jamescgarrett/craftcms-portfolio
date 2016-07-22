@@ -1,0 +1,139 @@
+{% extends "_layouts/site" %}
+
+{% block main %}
+	
+    {% set vars = {
+        'entry': entry,
+        'classes': 'intro--short js-intro--short',
+        'introHeader': true,
+        'full': false
+    } %}
+    {% include '_includes/intro' with vars %}
+
+    {% cache unless not craft.config.cache %}
+
+        <div class="page">
+
+            {% set prevType = null %}
+            {% set nextType = null %}
+
+            {% for block in entry.pageContent %}
+                {% set type = (nextType ?: block.type.handle) %}
+                {% set nextType = (not loop.last ? block.next().type.handle) %}
+                
+                {% switch type %}
+
+                    {% case 'header' %}
+                        <div id="{{macros.lowercase_replace_space(block.headerHeading)}}" class="sectionHeader row row--center wow">
+                            <div class="sectionHeader-heading col--12 col--6sm col--5lg">
+                                <h2>{{block.headerHeading}}</h2>
+                                {% if block.headerSubHeading|length %}
+                                    <p><em>{{block.headerSubHeading}}</em></p>
+                                {% endif %}
+                                <span class="ui-line"></span>
+                            </div>
+                        </div>
+
+                    {% case 'body' %}
+                        <div class="sectionBody row row--center row--nomargin wow">
+                            <div class="sectionBody-text sectionBody-text--first col--12 col--6sm col--5lg">
+                               {{block.bodyText}}
+                            </div>
+                        </div>
+
+                    {% case 'imageGrid' %}
+                        <div class="row row--nomargin wow">
+                            <div class="col--12 col--8sm{% if block.imageGridAlignment == "right" %} col--last{% endif %}">
+                                {% set largeImage = block.imageGridLargeImage.first() %}
+                                <div class="imageGrid-bg imageGrid-large" style="background-image: url('{{largeImage.getUrl()}}');"></div>
+                            </div>
+                            <div class="col--12 col--4sm">
+                                <div class="row row--nomargin">
+                                    <div class="col--12">
+                                        {% set smallImageTop = block.imageGridSmallTopImage.first() %}
+                                        {% set smallImageBottom = block.imageGridSmallBottomImage.first() %}
+                                        <div class="imageGrid-bg imageGrid-small imageGrid-small--top" style="background-image: url('{{smallImageTop.getUrl()}}');"></div>
+                                        <div class="imageGrid-bg imageGrid-small imageGrid-small--bottom" style="background-image: url('{{smallImageBottom.getUrl()}}');"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    {% case 'imageGridSquare' %}
+                        <div class="imageGrid--square row row--nomargin wow">
+                            {% for image in block.imageGridSquareImage %}
+                                <div class="col--6 col--3md col--nogutter col--noguttermd">
+                                    <div class="imageGrid-square-image">
+                                        {{ macros.responsive_image(image, {transformMode: 'fit' }) }}
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+
+                    {% case 'hiddenList' %}
+                        <div class="hiddenList row row--center row--nomargin">
+                            <div class="col--12">
+                                <span class="hiddenList-toggle js-hiddenList-toggle">{{"View More Clients" | t }}</span>
+                            </div>
+                        </div>
+                        <div class="hiddenList-lists row js-hiddenList-lists">
+                            <div class="hiddenList-item js-hiddenList-item col--12 col--6xs col--3sm">
+                                {{block.hiddenListColumn1}}
+                            </div> 
+                            <div class="hiddenList-item js-hiddenList-item col--12 col--6xs col--3sm">
+                                {{block.hiddenListColumn2}}
+                            </div> 
+                            <div class="hiddenList-item js-hiddenList-item col--12 col--6xs col--3sm">
+                                {{block.hiddenListColumn3}}
+                            </div> 
+                            <div class="hiddenList-item js-hiddenList-item col--12 col--6xs col--3sm">
+                                {{block.hiddenListColumn4}}
+                            </div> 
+                        </div>
+
+                    {% case 'imageWithLink' %}
+                        <div class="row row--middle row--nomargin wow">
+                            <div class="imageWithLink col--12">
+                                {% set imageWLink = block.imageWithLinkImage.first() %}
+                                {% set linkUrl = block.imageWithLinkUrl.first() %}
+                                {% if linkUrl %}
+    	                            <a class="imageHover" style="background-image: url('{{imageWLink.getUrl()}}');" href="{{linkUrl.slug}}">
+                                        <span class="imageHover-overlay"></span>
+    	                                <div class="imageHover-content">
+    	                                    <div class="imageHover-icons">
+                                                {% if block.imageWithLinkService|length %}
+                                                    <img class="imageHover-icon" src="{{siteUrl}}src/images/icon-{{macros.lowercase_replace_space(block.imageWithLinkService)}}.svg" alt="{{block.imageWithLinkService}}" />
+                                                {% endif %}
+                                            </div>
+                                            <h2 class="imageHover-title">{{"Work Sample"|t }}</h2>
+                                            <span class="imageHover-line ui-line"></span>
+                                        </div>
+    	                            </a>
+    	                        {% endif %}
+                            </div>
+                        </div>
+
+                    {% case 'doubleColumnList' %}
+                        <div class="sectionBody row row--center row--nomargin wow">
+                            <div class="doubleColumnList col--12 col--6sm col--5lg">
+                                <div class="row">
+                                    <div class="col--12 col--6sm">
+                                        {{ block.doubleColumnListColumn1 }}
+                                    </div>
+                                    <div class="col--12 col--6sm">
+                                        {{ block.doubleColumnListColumn2 }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                {% endswitch %}
+                {% set prevType = type %}
+
+            {% endfor %}
+
+        </div>
+
+    {% endcache %}
+
+{% endblock %}

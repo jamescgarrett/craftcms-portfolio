@@ -1,0 +1,35 @@
+.button{
+    transition: background-color 0.25s ease-out, color 0.25s ease-out;
+
+    display: inline-block;
+    vertical-align: middle;
+    height: var(--btn-base-height);
+    
+    padding: var(--btn-base-padding-height) var(--btn-base-padding-width);
+
+    background-color: var(--btn-base-bg);
+    border: var(--btn-base-border);
+    border-radius: var(--btn-base-border-radius);
+    outline: none;
+
+    text-align: center;
+    font-size: var(--btn-base-font-size);
+    font-weight: var(--btn-base-font-weight);
+    font-family: var(--btn-base-font-family);
+    line-height: var(--btn-base-height);
+    cursor: pointer;
+    color: var(--btn-base-color); 
+    white-space: nowrap;
+    touch-action: manipulation;
+    user-select: none;
+    letter-spacing: var(--btn-base-letter-spacing);
+    text-transform: var(--btn-base-case);
+    text-decoration: none
+}
+
+.button:hover,
+.button:focus {
+    background-color: var(--btn-base-bg-hover);
+    color: var(--btn-base-color-hover); 
+    border: var(--btn-base-border-hover);
+}

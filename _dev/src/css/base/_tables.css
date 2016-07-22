@@ -1,0 +1,24 @@
+table {
+	width: 100%;
+	margin-bottom: 1rem;
+	border-radius: 0px; 
+ }
+table thead,
+table tbody,
+table tfoot {
+	border: var(--table-base-border);
+	background-color: var(--table-base-bg); 
+}
+table thead th,
+table thead td,
+table tfoot th,
+table tfoot td {
+	padding: var(--table-base-headfoot-padding);
+}
+table tbody th,
+table tbody td {
+	padding: var(--table-base-padding);
+}
+table tbody tr:nth-child(even) {
+	background-color: var(--table-base-bg-even); 
+}

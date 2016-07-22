@@ -1,0 +1,158 @@
+/*
+ *  Typekit
+ */
+.wf-loading h1,
+.wf-loading h2,
+.wf-loading h3,
+.wf-loading h4,
+.wf-loading h5,
+.wf-loading h6,
+.wf-loading p,
+.wf-loading li {
+    visibility: hidden;
+}
+
+/*
+ *  Headings
+ */
+h1, 
+h2, 
+h3, 
+h4, 
+h5,
+h6{
+    margin-top: 0;
+    margin-bottom: var(--headings-base-margin-bottom);
+
+    font-family: var(--headings-base-font-family);
+    font-weight: var(--headings-base-font-weight);
+    line-height: var(--headings-base-line-height);
+    text-rendering: optimizeLegibility;
+    letter-spacing: var(--headings-base-letter-spacing);
+}
+h1 {
+    font-size: 2.4rem;
+
+    @media (--screen-sm-min) {
+        font-size: 3.6rem;
+    }
+}
+
+h2 {
+    font-size: 2.4rem;
+    text-transform: uppercase;
+
+    @media (--screen-md-min) {
+        font-size: 3.6rem;
+    } 
+}
+
+h3 {
+    font-size: 2.0rem; 
+}
+
+h4 {
+    font-size: 1.4rem;
+    text-transform: uppercase; 
+}
+
+h5 {
+    font-size: 1.7rem; 
+}
+
+h6 {
+     font-size: 1.6rem; 
+}
+
+/*
+ *  Paragraph
+ *  Address
+ *  Stylers
+ */
+p {
+    font-size: 1.4rem;
+    line-height: var(--line-height-base);
+    margin-top: var(--paragraph-base-margin-top);
+    margin-bottom: var(--paragraph-base-margin-bottom);
+    text-rendering: optimizeLegibility; 
+}
+
+address{
+    font-size: 1.4rem;
+    font-style: normal;
+    line-height: var(--line-height-base);
+    text-rendering: optimizeLegibility; 
+}
+
+b,
+strong{
+    font-weight: var(--font-bold-weight);
+}
+
+i, 
+em{
+    font-style: italic;
+}
+
+/*
+ *  Link
+ */
+a {
+    outline: 0;
+    
+    color: var(--link-base-color);
+    text-decoration: var(--link-base-decoration);
+    line-height: inherit;
+    cursor: pointer;
+}
+
+a:hover,
+a:focus{
+    color: var(--link-base-color-hover);
+    text-decoration: var(--link-base-decoration-hover);
+}
+
+a img{
+    border: 0;
+}
+
+/*
+ *  List
+ */
+ul {
+  list-style: disc inside; 
+}
+
+ol {
+  list-style: decimal inside; 
+}
+
+ol, 
+ul {
+  padding-left: 0;
+  margin-top: 0; 
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+    margin: 1.5rem 0 1.5rem 3rem;
+}
+
+li{
+    font-size: 1.4rem;
+}
+
+/*
+ *  Cursor Selection
+ */
+::-moz-selection {
+    color: white;
+    background: var(--text-selection-color);
+}
+
+::selection {
+    color: white;
+    background: var(--text-selection-color);
+}
