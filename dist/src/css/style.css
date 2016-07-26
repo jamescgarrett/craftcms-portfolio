@@ -2445,6 +2445,9 @@ th {
     margin: 0;
 }
 /*
+ *  Gradients
+ */
+/*
  *  Visibility
  */
 .hidden{
@@ -2546,8 +2549,8 @@ th {
 .col--nogutter{ padding-left: 0; padding-right: 0; }
 .col--paddingright{ padding-right: 0.2em; }
 .col--paddingleft{ padding-left: 0.2em; }
-.col--first{ -webkit-box-ordinal-group: 0 -1; -ms-flex-order: ; order: ; }
-.col--last{ -webkit-box-ordinal-group: 2 1; -ms-flex-order: ; order: ; }
+.col--first{ -webkit-box-ordinal-group: 0; -ms-flex-order: -1; order: -1; }
+.col--last{ -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; }
 @media (min-width: 33.750em) {
     .container{ max-width: 31.750em; }
 
@@ -2597,8 +2600,8 @@ th {
     .col--nogutterxs{ padding-left: 0; padding-right: 0; }
     .col--paddingrightxs{ padding-right: 0.2em; }
     .col--paddingleftxs{ padding-left: 0.2em; }
-    .col--firstxs{ -webkit-box-ordinal-group: 0 -1; -ms-flex-order: ; order: ; }
-    .col--lastxs{ -webkit-box-ordinal-group: 2 1; -ms-flex-order: ; order: ; }
+    .col--firstxs{ -webkit-box-ordinal-group: 0; -ms-flex-order: -1; order: -1; }
+    .col--lastxs{ -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; }
 }
 @media (min-width: 48em) {
     .container{ max-width: 47em; }
@@ -2649,8 +2652,8 @@ th {
     .col--noguttersm{ padding-left: 0; padding-right: 0; }
     .col--paddingrightsm{ padding-right: 0.2em; }
     .col--paddingleftsm{ padding-left: 0.2em; }
-    .col--firstsm{ -webkit-box-ordinal-group: 0 -1; -ms-flex-order: ; order: ; }
-    .col--lastsm{ -webkit-box-ordinal-group: 2 1; -ms-flex-order: ; order: ; }
+    .col--firstsm{ -webkit-box-ordinal-group: 0; -ms-flex-order: -1; order: -1; }
+    .col--lastsm{ -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; }
 }
 @media (min-width: 64em) {
     .container{ max-width: 63em; }
@@ -2701,8 +2704,8 @@ th {
     .col--noguttermd{ padding-left: 0; padding-right: 0; }
     .col--paddingrightmd{ padding-right: 0.2em; }
     .col--paddingleftmd{ padding-left: 0.2em; }
-    .col--firstmd{ -webkit-box-ordinal-group: 0 -1; -ms-flex-order: ; order: ; }
-    .col--lastmd{ -webkit-box-ordinal-group: 2 1; -ms-flex-order: ; order: ; }
+    .col--firstmd{ -webkit-box-ordinal-group: 0; -ms-flex-order: -1; order: -1; }
+    .col--lastmd{ -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; }
 }
 @media (min-width: 100.000em) {
     .container{ max-width: 99.000em; }
@@ -2753,8 +2756,8 @@ th {
     .col--nogutterlg{ padding-left: 0; padding-right: 0; }
     .col--paddingrightlg{ padding-right: 0.2em; }
     .col--paddingleftlg{ padding-left: 0.2em; }
-    .col--firstlg{ -webkit-box-ordinal-group: 0 -1; -ms-flex-order: ; order: ; }
-    .col--lastlg{ -webkit-box-ordinal-group: 2 1; -ms-flex-order: ; order: ; }
+    .col--firstlg{ -webkit-box-ordinal-group: 0; -ms-flex-order: -1; order: -1; }
+    .col--lastlg{ -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; }
 }
 html {
     box-sizing: border-box;
@@ -3346,11 +3349,19 @@ img {
 .nav-item a.is-active{
     color: rgb(33, 125, 164);
 }
-.page-halfSection{
+.page-fullSection{
     height: 100vh;
 }
-.page-textColumn{
+.page-halfSection{
+    height: 50vh;
+}
+.page-textColumn-full{
     height: 100vh;
+
+    background-color: rgb(24, 24, 24);
+}
+.page-textColumn-half{
+    height: 50vh;
 
     background-color: rgb(24, 24, 24);
 }
@@ -3390,17 +3401,115 @@ img {
 .page-imageColumn{
     height: 100vh;
 }
+.page-imageColumn--thule{
+    background: rgb(27, 46, 78);
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(top left, rgb(27, 46, 78), rgb(111, 150, 167));
+    /* For Safari 5.1 to 6.0 */
+    /* For Opera 11.1 to 12.0 */
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to top left, rgb(27, 46, 78), rgb(111, 150, 167));
+    /* Standard syntax */
+}
 .page-imageColumn--feliz-restaurants{
-    background: rgb(250, 142, 36); /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(left top, rgb(250, 142, 36), rgb(172, 8, 8)); /* For Safari 5.1 to 6.0 */ /* For Opera 11.1 to 12.0 */ /* For Firefox 3.6 to 15 */
-    background: -webkit-linear-gradient(top left, rgb(250, 142, 36), rgb(172, 8, 8));
-    background: linear-gradient(to bottom right, rgb(250, 142, 36), rgb(172, 8, 8)); /* Standard syntax */
+    background: rgb(250, 142, 36);
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(bottom left, rgb(250, 142, 36), rgb(172, 8, 8));
+    /* For Safari 5.1 to 6.0 */
+    /* For Opera 11.1 to 12.0 */
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom left, rgb(250, 142, 36), rgb(172, 8, 8));
+    /* Standard syntax */
 }
 .page-imageColumn--invisible-sentinel{
-    background: rgb(250, 142, 36); /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(left top, rgb(12, 66, 122), rgb(32, 138, 143)); /* For Safari 5.1 to 6.0 */ /* For Opera 11.1 to 12.0 */ /* For Firefox 3.6 to 15 */
+    background: rgb(12, 66, 122);
+    /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(top left, rgb(12, 66, 122), rgb(32, 138, 143));
-    background: linear-gradient(to bottom right, rgb(12, 66, 122), rgb(32, 138, 143)); /* Standard syntax */
+    /* For Safari 5.1 to 6.0 */
+    /* For Opera 11.1 to 12.0 */
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to top left, rgb(12, 66, 122), rgb(32, 138, 143));
+    /* Standard syntax */
+}
+.page-imageColumn--timer{
+    background: rgb(255, 193, 91);
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(top left, rgb(255, 193, 91), rgb(255, 75, 75));
+    /* For Safari 5.1 to 6.0 */
+    /* For Opera 11.1 to 12.0 */
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to top left, rgb(255, 193, 91), rgb(255, 75, 75));
+    /* Standard syntax */
+}
+.page-imageColumn--placemedia{
+    background: rgb(255, 193, 91);
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(top left, rgb(255, 193, 91), rgb(255, 75, 75));
+    /* For Safari 5.1 to 6.0 */
+    /* For Opera 11.1 to 12.0 */
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to top left, rgb(255, 193, 91), rgb(255, 75, 75));
+    /* Standard syntax */
+}
+.page-imageColumn--orexo{
+    background: rgb(255, 193, 91);
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(top left, rgb(255, 193, 91), rgb(255, 75, 75));
+    /* For Safari 5.1 to 6.0 */
+    /* For Opera 11.1 to 12.0 */
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to top left, rgb(255, 193, 91), rgb(255, 75, 75));
+    /* Standard syntax */
+}
+.page-imageColumn--fatback{
+    background: rgb(255, 193, 91);
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(top left, rgb(255, 193, 91), rgb(255, 75, 75));
+    /* For Safari 5.1 to 6.0 */
+    /* For Opera 11.1 to 12.0 */
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to top left, rgb(255, 193, 91), rgb(255, 75, 75));
+    /* Standard syntax */
+}
+.page-imageColumn--zubsolv{
+    background: rgb(255, 193, 91);
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(top left, rgb(255, 193, 91), rgb(255, 75, 75));
+    /* For Safari 5.1 to 6.0 */
+    /* For Opera 11.1 to 12.0 */
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to top left, rgb(255, 193, 91), rgb(255, 75, 75));
+    /* Standard syntax */
+}
+.page-imageColumn--cellar{
+    background: rgb(255, 193, 91);
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(top left, rgb(255, 193, 91), rgb(255, 75, 75));
+    /* For Safari 5.1 to 6.0 */
+    /* For Opera 11.1 to 12.0 */
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to top left, rgb(255, 193, 91), rgb(255, 75, 75));
+    /* Standard syntax */
+}
+.page-imageColumn--social-feeds{
+    background: rgb(255, 193, 91);
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(top left, rgb(255, 193, 91), rgb(255, 75, 75));
+    /* For Safari 5.1 to 6.0 */
+    /* For Opera 11.1 to 12.0 */
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to top left, rgb(255, 193, 91), rgb(255, 75, 75));
+    /* Standard syntax */
+}
+.page-imageColumn--locations{
+    background: rgb(255, 193, 91);
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(top left, rgb(255, 193, 91), rgb(255, 75, 75));
+    /* For Safari 5.1 to 6.0 */
+    /* For Opera 11.1 to 12.0 */
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to top left, rgb(255, 193, 91), rgb(255, 75, 75));
+    /* Standard syntax */
 }
 .post{}
 /*

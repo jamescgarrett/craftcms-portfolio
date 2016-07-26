@@ -139,8 +139,8 @@
 .col--nogutter{ padding-left: 0; padding-right: 0; }
 .col--paddingright{ padding-right: var(--grid-base-gutter--double); }
 .col--paddingleft{ padding-left: var(--grid-base-gutter--double); }
-.col--first{ @mixin col-order 0 -1; }
-.col--last{ @mixin col-order 2 1; }
+.col--first{ @mixin col-order 0, -1; }
+.col--last{ @mixin col-order 2, 1; }
 
 
 @media (--screen-xs-min) {
@@ -193,8 +193,8 @@
     .col--nogutterxs{ padding-left: 0; padding-right: 0; }
     .col--paddingrightxs{ padding-right: var(--grid-base-gutter--double); }
     .col--paddingleftxs{ padding-left: var(--grid-base-gutter--double); }
-    .col--firstxs{ @mixin col-order 0 -1; }
-    .col--lastxs{ @mixin col-order 2 1; }
+    .col--firstxs{ @mixin col-order 0, -1; }
+    .col--lastxs{ @mixin col-order 2, 1; }
 }
 
 @media (--screen-sm-min) {
@@ -247,8 +247,8 @@
     .col--noguttersm{ padding-left: 0; padding-right: 0; }
     .col--paddingrightsm{ padding-right: var(--grid-base-gutter--double); }
     .col--paddingleftsm{ padding-left: var(--grid-base-gutter--double); }
-    .col--firstsm{ @mixin col-order 0 -1; }
-    .col--lastsm{ @mixin col-order 2 1; }
+    .col--firstsm{ @mixin col-order 0, -1; }
+    .col--lastsm{ @mixin col-order 2, 1; }
 }
 
 @media (--screen-md-min) {
@@ -301,8 +301,8 @@
     .col--noguttermd{ padding-left: 0; padding-right: 0; }
     .col--paddingrightmd{ padding-right: var(--grid-base-gutter--double); }
     .col--paddingleftmd{ padding-left: var(--grid-base-gutter--double); }
-    .col--firstmd{ @mixin col-order 0 -1; }
-    .col--lastmd{ @mixin col-order 2 1; }
+    .col--firstmd{ @mixin col-order 0, -1; }
+    .col--lastmd{ @mixin col-order 2, 1; }
 }
 
 @media (--screen-lg-min) {
@@ -355,6 +355,6 @@
     .col--nogutterlg{ padding-left: 0; padding-right: 0; }
     .col--paddingrightlg{ padding-right: var(--grid-base-gutter--double); }
     .col--paddingleftlg{ padding-left: var(--grid-base-gutter--double); }
-    .col--firstlg{ @mixin col-order 0 -1; }
-    .col--lastlg{ @mixin col-order 2 1; }
+    .col--firstlg{ @mixin col-order 0, -1; }
+    .col--lastlg{ @mixin col-order 2, 1; }
 }

@@ -1,77 +1,28 @@
-{% extends "_layouts/site" %}
+{% extends '_layouts/site' %}
 
-{% block main %}
-
-    {% set vars = {
-            "entry": entry,
-            'classes': 'intro--tall js-intro--tall',
-            'introHeader': true,
-            'full': true
-        } 
-    %}
-    {% include '_includes/intro' with vars %}
-
+{% block main %}    
     {% cache unless not craft.config.cache %}
-
         <div class="page">
-
-            <div class="entryHeader row row--center row--nomargin wow">
-                <div class="col--12 col--6sm col--5lg">
-                    <h2 class="entryHeader-heading">{{entry.heading}}</h2>
+            <div class="page-fullSection row row--nomargin">
+                <div class="col--12 col--6sm">
+                    <div class="page-imageColumn page-imageColumn--{{macros.lowercase_replace_space(entry.title)}} row row--middle row--center row--nomargin">
+                        
+                    </div>
+                </div>
+                <div class="col--12 col--6sm">
+                    <div class="page-textColumn-full row row--middle row--center row--nomargin">
+                        <div class="col--7">
+                            <div class="page-textColumn-header">
+                                <h1>{{entry.title}}</h1>
+                                <p>{{entry.description}}</p>
+                            </div>
+                            <div class="page-textColumn-info">
+                                <p class="page-textColumn-tech"><strong>{{"Tech:"|t}}</strong> {{entry.tech}}</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="sectionBody row row--centerxs row--nomargin wow">
-                <div class="sectionBody-text sectionBody-text--first col--12 col--6sm col--5lg">
-                   {{entry.body}}
-                </div>
-            </div>
-
-            {% set prevType = null %}
-            {% set nextType = null %}
-
-            {% for block in entry.workContent %}
-                {% set type = (nextType ?: block.type.handle) %}
-                {% set nextType = (not loop.last ? block.next().type.handle) %}
-                
-                {% switch type %}
-
-                    {% case 'textBlock' %}
-                        <div class="sectionBody row row--center{% if not loop.last %} row--nomargin{% endif %} wow">
-                            <div class="sectionBody-text col--12 col--6sm col--5lg">
-                                {{block.textBlockText}}
-                            </div>
-                        </div>
-
-                    {% case 'doubleImage' %}
-                        <div class="row{% if not loop.last %} row--nomargin{% endif %} wow">
-                            {% for image in block.doubleImageImages %}
-                                <div class="col--12 col--6sm">
-                                     {{ macros.responsive_image(image, { transformMode: 'fit' }) }}
-                                </div>
-                            {% endfor %}
-                        </div>
-
-                    {% case 'centeredImage' %}
-                        <div class="sectionImage row row--center{% if not loop.last %} row--nomargin{% endif %} wow">
-                            <div class="col--12 col--7sm col--6lg">
-                                {% for image in block.centeredImageImages %}
-                                    {{ macros.responsive_image(image, { transformMode: 'fit' }) }}
-                                {% endfor %}
-                            </div>
-                        </div>
-
-                    {% case 'fullWidthImage' %}
-                        <div class="row wow">
-                            <div class="col--12">
-                                {% for image in block.fullWidthImageImages %}
-                                    {{ macros.responsive_image(image, { transformMode: 'fit' }) }}
-                                {% endfor %}
-                            </div>
-                        </div>
-
-                {% endswitch %}
-                {% set prevType = type %}
-            {% endfor %}
         </div>
     {% endcache %}
 {% endblock %}

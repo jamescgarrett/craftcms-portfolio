@@ -1,9 +1,19 @@
-.page-halfSection{
+.page-fullSection{
     height: 100vh;
 }
 
-.page-textColumn{
+.page-halfSection{
+    height: 50vh;
+}
+
+.page-textColumn-full{
     height: 100vh;
+
+    background-color: var(--gray-darker);
+}
+
+.page-textColumn-half{
+    height: 50vh;
 
     background-color: var(--gray-darker);
 }
@@ -49,21 +59,48 @@
     height: 100vh;
 }
 
+.page-imageColumn--thule{
+    @mixin gradient-bg top, left, rgb(27, 46, 78), rgb(111, 150, 167);
+}
+
 .page-imageColumn--feliz-restaurants{
-    background: rgb(250, 142, 36); /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(left top, rgb(250, 142, 36), rgb(172, 8, 8)); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(bottom right, rgb(250, 142, 36), rgb(172, 8, 8)); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(bottom right, rgb(250, 142, 36), rgb(172, 8, 8)); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to bottom right, rgb(250, 142, 36), rgb(172, 8, 8)); /* Standard syntax */
+    @mixin gradient-bg bottom, left, rgb(250, 142, 36), rgb(172, 8, 8);
 }
 
 .page-imageColumn--invisible-sentinel{
-    background: rgb(250, 142, 36); /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(left top, rgb(12, 66, 122), rgb(32, 138, 143)); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(bottom right, rgb(12, 66, 122), rgb(32, 138, 143)); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(bottom right, rgb(12, 66, 122), rgb(32, 138, 143)); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to bottom right, rgb(12, 66, 122), rgb(32, 138, 143)); /* Standard syntax */
+    @mixin gradient-bg top, left, rgb(12, 66, 122), rgb(32, 138, 143);
 }
 
+.page-imageColumn--timer{
+    @mixin gradient-bg top, left, rgb(255, 193, 91), rgb(255, 75, 75);
+}
+
+.page-imageColumn--placemedia{
+    @mixin gradient-bg top, left, rgb(255, 193, 91), rgb(255, 75, 75);
+}
+
+.page-imageColumn--orexo{
+    @mixin gradient-bg top, left, rgb(255, 193, 91), rgb(255, 75, 75);
+}
+
+.page-imageColumn--fatback{
+    @mixin gradient-bg top, left, rgb(255, 193, 91), rgb(255, 75, 75);
+}
+
+.page-imageColumn--zubsolv{
+    @mixin gradient-bg top, left, rgb(255, 193, 91), rgb(255, 75, 75);
+}
+
+.page-imageColumn--cellar{
+    @mixin gradient-bg top, left, rgb(255, 193, 91), rgb(255, 75, 75);
+}
+
+.page-imageColumn--social-feeds{
+    @mixin gradient-bg top, left, rgb(255, 193, 91), rgb(255, 75, 75);
+}
+
+.page-imageColumn--locations{
+    @mixin gradient-bg top, left, rgb(255, 193, 91), rgb(255, 75, 75);
+}
 
 
