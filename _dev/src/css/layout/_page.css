@@ -104,3 +104,15 @@
 }
 
 
+.page-textSection{
+    padding: 55px 0;
+}
+
+.page-textSection-body{
+    text-align: left;
+}
+
+.page-imagesSection{
+    background-color: var(--gray-lightest);
+}
+

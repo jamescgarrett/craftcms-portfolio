@@ -77,7 +77,7 @@
     --grid-base-gutter: 0.1em;
     --grid-base-gutter--double: calc(var(--grid-base-gutter) * 2);
     --grid-base-gutter--triple: calc(var(--grid-base-gutter) * 3);
-    --grid-base-row-spacing: var(--page-content-padding);
+    --grid-base-row-spacing: 20px;
 
     --footer-base-height: 200px;
 

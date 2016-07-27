@@ -6,7 +6,6 @@
             <div class="page-fullSection row row--nomargin">
                 <div class="col--12 col--6sm">
                     <div class="page-imageColumn page-imageColumn--{{macros.lowercase_replace_space(entry.title)}} row row--middle row--center row--nomargin">
-                        
                     </div>
                 </div>
                 <div class="col--12 col--6sm">
@@ -17,12 +16,39 @@
                                 <p>{{entry.description}}</p>
                             </div>
                             <div class="page-textColumn-info">
-                                <p class="page-textColumn-tech"><strong>{{"Tech:"|t}}</strong> {{entry.tech}}</p>
+                                <p class="page-textColumn-tech"><strong>{{"Tech: "|t}}</strong>{{entry.tech}}</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            {% set prevType = null %}
+            {% set nextType = null %}
+
+            {% for block in entry.pageContent %}
+                {% set type = (nextType ?: block.type.handle) %}
+                {% set nextType = (not loop.last ? block.next().type.handle) %}
+                
+                {% switch type %}
+
+                    {% case 'blockBody' %}
+                        <div class="page-textSection row row--center row--nomargin">
+                            <div class="col--12 col--6sm">
+                                <div class="page-textSection-body">
+                                    {{block.body}}
+                                </div>
+                            </div>
+                        </div>
+
+                    {% case 'blockImages' %}
+                        <div class="page-imagesSection">
+                            {% for image in block.images %}
+                                {{ macros.responsive_image(image, {transformMode: 'fit' }) }}
+                            {% endfor %}    
+                        </div>
+
+               {% endswitch %}
+            {% endfor %}
         </div>
     {% endcache %}
 {% endblock %}

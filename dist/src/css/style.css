@@ -2444,6 +2444,12 @@ th {
     padding: 0;
     margin: 0;
 }
+.disclaimer{
+  margin: 15px 0;
+  
+  color: rgb(85, 85, 85);
+  font-style: italic;
+}
 /*
  *  Gradients
  */
@@ -2494,10 +2500,9 @@ th {
 
     margin-right: -0.1em;
     margin-left: -0.1em;
-    margin-bottom: 55px;
+    margin-bottom: 20px;
 }
-.row:last-child{ margin-bottom: 0; }
-.row--marginhalf{ margin-bottom: 27.5px; }
+.row--marginhalf{ margin-bottom: 10px; }
 .row--nomargin{ margin-bottom: 0; }
 .row--nogutter{ margin-left: 0; margin-right: 0; }
 .row--start{ -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; text-align: start; }
@@ -2984,18 +2989,18 @@ h1 {
   }
     }
 h2 {
-    font-size: 24px;
-    font-size: 2.4rem;
-    text-transform: uppercase 
+    font-size: 21px;
+    font-size: 2.1rem 
 }
 @media (min-width: 64em) {
   h2 {
-    font-size: 3.6rem;
+    font-size: 2.8rem;
   }
     }
 h3 {
-    font-size: 20px;
-    font-size: 2.0rem; 
+    font-size: 21px;
+    font-size: 2.1rem; 
+    font-weight: 700;
 }
 h4 {
     font-size: 14px;
@@ -3024,6 +3029,9 @@ p {
     margin-bottom: 10px;
     margin-bottom: 1rem;
     text-rendering: optimizeLegibility; 
+}
+p:last-child{
+    margin-bottom: 0;
 }
 address{
     font-size: 14px;
@@ -3510,6 +3518,15 @@ img {
     /* For Firefox 3.6 to 15 */
     background: linear-gradient(to top left, rgb(255, 193, 91), rgb(255, 75, 75));
     /* Standard syntax */
+}
+.page-textSection{
+    padding: 55px 0;
+}
+.page-textSection-body{
+    text-align: left;
+}
+.page-imagesSection{
+    background-color: rgb(241, 241, 241);
 }
 .post{}
 /*

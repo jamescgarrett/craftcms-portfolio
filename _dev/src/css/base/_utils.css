@@ -33,6 +33,13 @@
     margin: 0;
 }
 
+.disclaimer{
+  margin: 15px 0;
+  
+  color: var(--gray);
+  font-style: italic;
+}
+
 /*
  *  Gradients
  */
