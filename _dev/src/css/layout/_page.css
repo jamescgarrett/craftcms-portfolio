@@ -26,6 +26,13 @@
     text-align: left;
 }
 
+.page-textColumn-header h1 a{
+    color: white;
+}
+.page-textColumn-header h1 a:hover{
+    color: var(--gray-light);
+}
+
 .page-textColumn-header h1,
 .page-textColumn-header p{
     margin: 0;
@@ -53,6 +60,10 @@
     color: white;
     text-decoration: underline;
     font-weight: var(--font-bold-weight);
+}
+.page-textColumn-info a:hover{
+    color: var(--gray-light);
+    text-decoration: none;
 }
 
 .page-imageColumn{

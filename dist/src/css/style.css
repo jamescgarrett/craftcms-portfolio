@@ -3061,7 +3061,7 @@ a {
 }
 a:hover,
 a:focus{
-    color: rgb(33, 125, 164);
+    color: rgb(195, 189, 184);
     text-decoration: none;
 }
 a img{
@@ -3380,6 +3380,12 @@ img {
 
     text-align: left;
 }
+.page-textColumn-header h1 a{
+    color: white;
+}
+.page-textColumn-header h1 a:hover{
+    color: rgb(195, 189, 184);
+}
 .page-textColumn-header h1,
 .page-textColumn-header p{
     margin: 0;
@@ -3405,6 +3411,10 @@ img {
     color: white;
     text-decoration: underline;
     font-weight: 700;
+}
+.page-textColumn-info a:hover{
+    color: rgb(195, 189, 184);
+    text-decoration: none;
 }
 .page-imageColumn{
     height: 100vh;

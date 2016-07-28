@@ -17,7 +17,7 @@
     --text-base-color:               var(--gray-dark);
 
     --link-base-color:               var(--gray-dark);
-    --link-base-color-hover:         var(--brand-primary);
+    --link-base-color-hover:         var(--gray-light);
     --link-base-decoration:          none;
     --link-base-decoration-hover:    none;
 
