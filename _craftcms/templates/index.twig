@@ -3,10 +3,18 @@
 {% block main %}
     <div class="page">
 
-        <div class="page-fullSection row row--nomargin">
-            <div class="col--12 col--6sm">
-                <div class="currentCode row row--middle row--center row--nomargin">
-                    {# {% include '_includes/current-code' %} #}
+        <div class="page-fullSection row row--middle row--center row--nomargin">
+            <div class="currentCode col--12 col--6sm">
+                <div class="page-currentCode row row--middle row--center row--nomargin">
+                    <div class="col--4">
+                        {% cache unless not craft.config.cache %}
+                            {% for post in craft.entries.section('currentWork').limit(1) %}
+                                <p class="currentCode-date">{{post.postDate|date('n.d.Y – g:iA')}}</p>
+                                <p class="currentCode-text">{{"currently working with"|t}}</p>
+                                <p class="currentCode-title">{{post.title}}</p>
+                            {% endfor %}
+                        {% endcache %}
+                    </div>
                 </div>
             </div>
             <div class="col--12 col--6sm">
@@ -40,7 +48,7 @@
                     </div>
                     <div class="col--12 col--6sm{%if loop.index is even %} col--firstsm{% endif %}">
                         <div class="page-imageColumn-half page-imageColumn--{{macros.lowercase_replace_space(post.title)}} row row--center row--middle row--nomargin">
-                            <div class="col--7">
+                            <div class="col--12 col--8sm">
                                 <div class="page-imageColumn-image">
                                     {% set image  = post.thumbnail.first() %}
                                     {% if image %}

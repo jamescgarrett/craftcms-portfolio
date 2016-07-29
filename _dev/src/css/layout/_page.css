@@ -6,6 +6,12 @@
     height: 75vh;
 }
 
+.page-currentCode{
+    height: 100vh;
+    
+    @mixin gradient-bg top, right, rgba(0, 69, 73, 0.8), rgba(26, 175, 242, 0.8);
+}
+
 .page-textColumn-full{
     height: 100vh;
 
@@ -95,31 +101,31 @@
 }
 
 .page-imageColumn--placemedia{
-    @mixin gradient-bg top, left, rgb(255, 193, 91), rgb(255, 75, 75);
+    @mixin gradient-bg top, left, rgb(86, 255, 106), rgb(0, 158, 229);
 }
 
 .page-imageColumn--orexo{
-    @mixin gradient-bg top, left, rgb(255, 193, 91), rgb(255, 75, 75);
+    @mixin gradient-bg bottom, left, rgb(193, 0, 0), rgb(77, 0, 0);
 }
 
 .page-imageColumn--fatback{
-    @mixin gradient-bg top, left, rgb(255, 193, 91), rgb(255, 75, 75);
+    @mixin gradient-bg top, left, rgb(0, 66, 96), rgb(64, 181, 234);
 }
 
 .page-imageColumn--zubsolv{
-    @mixin gradient-bg top, left, rgb(255, 193, 91), rgb(255, 75, 75);
+    @mixin gradient-bg top, right, rgb(61, 0, 82), rgb(249, 146, 39);
 }
 
 .page-imageColumn--cellar{
-    @mixin gradient-bg top, left, rgb(255, 193, 91), rgb(255, 75, 75);
+    @mixin gradient-bg top, left, rgb(137, 93, 0), rgb(255, 191, 54);
 }
 
 .page-imageColumn--social-feeds{
-    @mixin gradient-bg top, left, rgb(255, 193, 91), rgb(255, 75, 75);
+    @mixin gradient-bg top, left, rgb(51, 124, 212), rgb(220, 80, 55);
 }
 
 .page-imageColumn--locations{
-    @mixin gradient-bg top, left, rgb(255, 193, 91), rgb(255, 75, 75);
+    @mixin gradient-bg bottom, left, rgb(51, 124, 212), rgb(220, 80, 55);
 }
 
 

@@ -5,7 +5,15 @@
         <div class="page">
             <div class="page-fullSection row row--nomargin">
                 <div class="col--12 col--6sm">
-                    <div class="page-imageColumn page-imageColumn--{{macros.lowercase_replace_space(entry.title)}} row row--middle row--center row--nomargin">
+                    <div class="page-imageColumn-full page-imageColumn--{{macros.lowercase_replace_space(entry.title)}} row row--middle row--center row--nomargin">
+                        <div class="col--12 col--8sm">
+                            <div class="page-imageColumn-image">
+                                {% set image  = entry.thumbnail.first() %}
+                                {% if image %}
+                                    {{ macros.responsive_image(image, {transformMode: 'fit' }) }}
+                                {% endif %}
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col--12 col--6sm">

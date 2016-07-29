@@ -1,0 +1,28 @@
+.currentCode{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.currentCode p{
+	margin: 0;
+
+	color: white;
+	font-size: 1.6rem;
+	text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+p.currentCode-text{
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+
+	border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+	
+	font-weight: var(--font-bold-weight);
+}
+
+p.currentCode-title{
+	margin-bottom: 10px;
+
+	font-size: 3.6rem;
+}
