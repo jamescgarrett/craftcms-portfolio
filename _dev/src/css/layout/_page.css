@@ -3,7 +3,7 @@
 }
 
 .page-halfSection{
-    height: 50vh;
+    height: 75vh;
 }
 
 .page-textColumn-full{
@@ -13,7 +13,7 @@
 }
 
 .page-textColumn-half{
-    height: 50vh;
+    height: 75vh;
 
     background-color: var(--gray-darker);
 }
@@ -66,8 +66,16 @@
     text-decoration: none;
 }
 
-.page-imageColumn{
+.page-imageColumn-full{
     height: 100vh;
+}
+
+.page-imageColumn-half{
+    height: 75vh;
+}
+
+.page-imageColumn-image img{
+    
 }
 
 .page-imageColumn--thule{

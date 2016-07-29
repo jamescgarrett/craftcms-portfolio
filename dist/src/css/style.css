@@ -3361,7 +3361,7 @@ img {
     height: 100vh;
 }
 .page-halfSection{
-    height: 50vh;
+    height: 75vh;
 }
 .page-textColumn-full{
     height: 100vh;
@@ -3369,7 +3369,7 @@ img {
     background-color: rgb(24, 24, 24);
 }
 .page-textColumn-half{
-    height: 50vh;
+    height: 75vh;
 
     background-color: rgb(24, 24, 24);
 }
@@ -3416,8 +3416,14 @@ img {
     color: rgb(195, 189, 184);
     text-decoration: none;
 }
-.page-imageColumn{
+.page-imageColumn-full{
     height: 100vh;
+}
+.page-imageColumn-half{
+    height: 75vh;
+}
+.page-imageColumn-image img{
+    
 }
 .page-imageColumn--thule{
     background: rgb(27, 46, 78);
