@@ -17,8 +17,8 @@
     --text-base-color:               var(--gray-dark);
 
     --link-base-color:               var(--gray-dark);
-    --link-base-color-hover:         var(--gray-light);
-    --link-base-decoration:          none;
+    --link-base-color-hover:         var(--brand-primary);
+    --link-base-decoration:          underline;
     --link-base-decoration-hover:    none;
 
     --font-base-family:   'Merriweather', serif;
@@ -38,29 +38,29 @@
     --headings-base-margin-bottom:     1rem;
 
     --btn-base-color:         white;
-    --btn-base-color-hover:   white;
+    --btn-base-color-hover:   var(--text-base-color);
     --btn-base-letter-spacing: 0;
-    --btn-base-case:           uppercase;
+    --btn-base-case:           normal;
     --btn-base-font-family:    var(--font-base-family);
-    --btn-base-font-weight:    var(--font-bold-weight);
+    --btn-base-font-weight:    var(--font-base-weight);
     --btn-base-font-size:    1.6rem;
-    --btn-base-bg:            rgba(0, 0, 0, 0.5);
-    --btn-base-bg-hover:      transparent;
-    --btn-base-border:      3px solid white;
-    --btn-base-border-hover: 0;
+    --btn-base-bg:            var(--brand-primary);
+    --btn-base-bg-hover:      white;
+    --btn-base-border:      1px solid var(--brand-primary);
+    --btn-base-border-hover: 1px solid var(--brand-primary);
     --btn-base-border-radius: 0;
     --btn-base-padding-height:      15px;
     --btn-base-padding-width:       25px;
     --btn-base-height:         auto;
 
     --input-base-color:         var(--text-base-color);
-    --input-base-bg:            white;
+    --input-base-bg:            var(--gray-lightest);
     --input-base-bg-focus:      white;
-    --input-base-border:              2px solid white;
-    --input-base-border-focus:        2px solid var(--brand-primary);
+    --input-base-border:              1px solid var(--gray-lightest);
+    --input-base-border-focus:        1px solid var(--brand-primary);
     --input-base-border-radius: 0;
     --input-base-placeholder-color:   var(--gray);
-    --input-base-padding-height:      10px;
+    --input-base-padding-height:      15px;
     --input-base-padding-width:       15px;
     --input-base-height:         auto;
     --input-base-font-size: 1.4rem;
@@ -79,7 +79,7 @@
     --grid-base-gutter--triple: calc(var(--grid-base-gutter) * 3);
     --grid-base-row-spacing: 20px;
 
-    --footer-base-height: 200px;
+    --footer-base-height: 85px;
 
     --screen-xs-min-grid: 31.750em;
     --screen-sm-min-grid: 47em;

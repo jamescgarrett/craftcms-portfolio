@@ -38,6 +38,11 @@
  *  Components
  */
 @import 'components/_current-code';
+@import 'components/_nav-toggle';
+@import 'components/_overlay';
+@import 'components/_social';
+@import 'components/_form-container';
+@import 'components/_animation';
 
 /*
  *  Print

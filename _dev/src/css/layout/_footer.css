@@ -1,3 +1,29 @@
 .footer{
-   
+   padding: 20px 0 40px;
+
+   background-color: var(--gray-darker);
+}
+
+.footer p,
+.footer p a {
+    margin: 0;
+
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+.footer p a:hover{
+    color: var(--brand-primary);
+}
+
+.footer-email{
+    padding-left: var(--page-content-padding);
+}
+
+.footer .social{
+    text-align: right;
+}
+.footer .social-item a{
+    text-decoration: none;
+    color: white;
 }

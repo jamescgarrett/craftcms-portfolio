@@ -3,22 +3,16 @@
 {% block main %}
     <div class="page">
 
-        <div class="page-fullSection row row--middle row--center row--nomargin">
+        <div class="page-section page-section--full row row--middle row--center row--nomargin">
             <div class="currentCode col--12 col--6sm">
-                <div class="page-currentCode row row--middle row--center row--nomargin">
-                    <div class="col--4">
-                        {% cache unless not craft.config.cache %}
-                            {% for post in craft.entries.section('currentWork').limit(1) %}
-                                <p class="currentCode-date">{{post.postDate|date('n.d.Y – g:iA')}}</p>
-                                <p class="currentCode-text">{{"currently working with"|t}}</p>
-                                <p class="currentCode-title">{{post.title}}</p>
-                            {% endfor %}
-                        {% endcache %}
+                <div class="page-currentCode page-currentCode--full row row--middle row--center row--nomargin">
+                    <div class="col--12 col--7sm col--5md col--4lg">
+                         {% include '_includes/current-code' %}
                     </div>
                 </div>
             </div>
             <div class="col--12 col--6sm">
-                <div class="page-textColumn-full row row--middle row--center row--nomargin">
+                <div class="page-textColumn page-textColumn--full row row--middle row--center row--nomargin">
                     <div class="col--7">
                         <div class="page-textColumn-header">
                             <h1>{{"James Garrett"|t}}</h1>
@@ -31,9 +25,9 @@
 
         {% cache unless not craft.config.cache %}
             {% for post in craft.entries.section('work') %}
-                <div class="page-halfSection row row--nomargin">
+                <div class="page-section page-section--middle row row--nomargin">
                     <div class="col--12 col--6sm{%if loop.index is even %} col--lastsm{% endif %}">
-                        <div class="page-textColumn-half row row--middle row--center row--nomargin">
+                        <div class="page-textColumn page-textColumn--medium row row--middle row--center row--nomargin">
                             <div class="col--7">
                                 <div class="page-textColumn-header">
                                     <h1><a href="{{post.url}}">{{post.title}}</a></h1>
@@ -47,7 +41,7 @@
                         </div>
                     </div>
                     <div class="col--12 col--6sm{%if loop.index is even %} col--firstsm{% endif %}">
-                        <div class="page-imageColumn-half page-imageColumn--{{macros.lowercase_replace_space(post.title)}} row row--center row--middle row--nomargin">
+                        <div class="page-imageColumn page-imageColumn--medium page-imageColumn--{{macros.lowercase_replace_space(post.title)}} row row--center row--middle row--nomargin">
                             <div class="col--12 col--8sm">
                                 <div class="page-imageColumn-image">
                                     {% set image  = post.thumbnail.first() %}

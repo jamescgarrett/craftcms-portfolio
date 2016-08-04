@@ -523,102 +523,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     /*
-     *  Toggle Client List
-     *
-     */
-    if (typeof document.querySelector('.js-hiddenList-toggle') !== 'undefined' && document.querySelector('.js-hiddenList-toggle') !== null) {
-        document.querySelector('.js-hiddenList-toggle').addEventListener('click', _ClientList2.default.bind(this));
-    }
-
-    /*
-     *  Work Filter
-     *
-     */
-    if (typeof document.querySelector('.js-workList-filter-item') !== 'undefined' && document.querySelector('.js-workList-filter-item') !== null) {
-        var filters = document.querySelectorAll('.js-workList-filter-item');
-        for (var d = 0; d < filters.length; d++) {
-            filters[d].addEventListener('click', _WorkFilter2.default.bind(this, filters, filters[d]));
-        }
-    }
-
-    /*
-     *  Toggle & Submit Contact Form
-     *
-     */
-    if (typeof document.querySelector('.js-callToAction-toggle') !== 'undefined' && document.querySelector('.js-callToAction-toggle') !== null) {
-        var contactForm = document.querySelector('.js-form--contact');
-        var formContactContainer = document.querySelector('.js-formContainer--contact');
-        var contactFormToggles = [document.querySelector('.js-callToAction-toggle'), document.querySelector('.js-formContainer-close')];
-        for (var j = 0; j < contactFormToggles.length; j++) {
-            contactFormToggles[j].addEventListener('click', _Form2.default.ToggleForm.bind(this, formContactContainer));
-        }
-        contactForm.addEventListener('submit', _Form2.default.submitForm.bind(this, contactForm, '<p><b>Thank you!</b><br>"We\'ll be in touch soon!</p>', formContactContainer, true));
-    }
-
-    /*
      *  Submit Newsletter Form
      *
      */
-    if (typeof document.querySelector('.form--newsletter') !== 'undefined' && document.querySelector('.form--newsletter') !== null) {
-        var newsletterForm = document.querySelector('.js-form--newsletter');
-        var formNewsletterContainer = document.querySelector('.js-formContainer--newsletter');
-        newsletterForm.addEventListener('submit', _Form2.default.submitForm.bind(this, newsletterForm, '<p><b>You\'ve been added to our list!</b></p>', formNewsletterContainer, false));
-    }
-
-    /*
-     *  WOW. Animate elements on scroll
-     *
-     */
-    if (typeof document.querySelector('.wow') !== 'undefined' && document.querySelector('.wow') !== null) {
-        var wow = new _wow2.default({
-            offset: 100,
-            live: false
-        });
-        wow.init();
-    }
-
-    /*
-     *  Control Sticky Header
-     *
-     */
-    if (typeof document.querySelector('.js-intro--tall') !== 'undefined' && document.querySelector('.js-intro--tall') !== null) {
-        var scrollHeader = new _Stick2.default({
-            item: document.querySelector('.js-header'),
-            animation: 'header--scrolling',
-            offset: window.innerHeight - 30,
-            reverse: true
-        });
-    }
-
-    if (typeof document.querySelector('.js-intro--short') !== 'undefined' && document.querySelector('.js-intro--short') !== null) {
-        var scrollHeaderShort = new _Stick2.default({
-            item: document.querySelector('.js-header'),
-            animation: 'header--scrolling',
-            offset: window.innerHeight / 3,
-            reverse: true
-        });
-    }
-
-    if (typeof document.querySelector('.js-intro--shortest') !== 'undefined' && document.querySelector('.js-intro--shortest') !== null) {
-        var _scrollHeaderShort = new _Stick2.default({
-            item: document.querySelector('.js-header'),
-            animation: 'header--scrolling',
-            offset: window.innerHeight / 4,
-            reverse: true
-        });
-    }
-
-    /*
-     *  Control Sticky Scroll Indicator
-     *
-     */
-    if (typeof document.querySelector('.js-intro-scrollIndicator') !== 'undefined' && document.querySelector('.js-intro-scrollIndicator') !== null) {
-        var scrollIndicator = new _Stick2.default({
-            item: document.querySelector('.js-intro-scrollIndicator'),
-            animation: 'invisible',
-            offset: 14,
-            reverse: true
-        });
+    if (typeof document.querySelector('.js_form') !== 'undefined' && document.querySelector('.js_form') !== null) {
+        var form = document.querySelector('.js_form');
+        var formContainer = document.querySelector('.js_formContainer');
+        form.addEventListener('submit', _Form2.default.submitForm.bind(this, form, '<p><b>Thank you for contacting me, I\'ll be in touch with you shortly!</b></p>', formContainer, false));
     }
 });
 

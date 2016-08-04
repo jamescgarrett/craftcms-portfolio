@@ -1,11 +1,14 @@
-<nav class="nav js-nav">
-    <ul class="nav-main">
-       {#  {% cache globally unless not craft.config.cache %}
-            {% set nav = craft.entries.section('navigation').type('main').slug('main').first() %}
-            {% if nav and nav.children %}
-                {{ macros.navigation(nav.children, 'nav-item', 'nav-item-children', 'is-active') }}
-            {% endif %}
-        {% endcache %} #}
+<nav class="nav row row--middle row--center row--nomargin js-nav">
+    <ul class="nav-main col--12">
+        <li class="nav-item">
+            <a class="{{ macros.is_active('', 1, 'is-active') }}" href="{{siteUrl}}">{{"Work"|t}}</a>
+        </li>
+        <li class="nav-item">
+            <a class="{{ macros.is_active('about', 1, 'is-active') }}" href="{{url('about')}}">{{"About"|t}}</a>
+        </li>
+        <li class="nav-item">
+            <a class="{{ macros.is_active('contact', 1, 'is-active') }}" href="{{url('contact')}}">{{"Contact"|t}}</a>
+        </li>
     </ul>
 </nav>
 

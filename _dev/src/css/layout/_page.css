@@ -1,27 +1,51 @@
-.page-fullSection{
+.page-section--full{
     height: 100vh;
 }
-
-.page-halfSection{
-    height: 75vh;
+.page-section--medium{
+    height: 65vh;
+}
+.page-section--small{
+    height: 45vh;
 }
 
 .page-currentCode{
+    padding-top: 20px;
+
+    @mixin gradient-bg top, right, rgba(0, 62, 65, 0.7), rgba(0, 176, 255, 0.7);
+}
+.page-currentCode--full{
     height: 100vh;
-    
-    @mixin gradient-bg top, right, rgba(0, 69, 73, 0.8), rgba(26, 175, 242, 0.8);
+}
+.page-currentCode--medium{
+    height: 65vh;
+}
+.page-currentCode--small{
+    height: 45vh;
 }
 
-.page-textColumn-full{
-    height: 100vh;
+.page-textColumn{
+    padding-top: 20px;
 
     background-color: var(--gray-darker);
 }
+.page-textColumn--full{
+    height: 100vh;
+}
+.page-textColumn--medium{
+    height: 65vh;
+}
+.page-textColumn--small{
+    height: 45vh;
+}
 
-.page-textColumn-half{
-    height: 75vh;
-
-    background-color: var(--gray-darker);
+.page-imageColumn--full{
+    height: 100vh;
+}
+.page-imageColumn--medium{
+    height: 65vh;
+}
+.page-imageColumn--small{
+    height: 45vh;
 }
 
 .page-textColumn-header{
@@ -49,6 +73,9 @@
 .page-textColumn-header p{
     margin-top: 10px;
 }
+.page-textColumn-header a{
+    text-decoration: none;
+}
 
 .page-textColumn-info{
     margin-top: 25px;
@@ -70,18 +97,6 @@
 .page-textColumn-info a:hover{
     color: var(--gray-light);
     text-decoration: none;
-}
-
-.page-imageColumn-full{
-    height: 100vh;
-}
-
-.page-imageColumn-half{
-    height: 75vh;
-}
-
-.page-imageColumn-image img{
-    
 }
 
 .page-imageColumn--thule{
@@ -138,6 +153,54 @@
 }
 
 .page-imagesSection{
+    padding-top: var(--page-content-padding);
+    padding-bottom: var( --page-content-padding);
+
     background-color: var(--gray-lightest);
+}
+
+.page-imagesSection-image{
+    padding: 0 calc(var(--page-content-padding) *2);
+}
+
+.page-resumeSection{
+    padding: 55px 0;
+}
+
+.page-resumeSection-section{
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.page-resumeSection-title{
+    margin-left: 100px;
+    padding-left: 20px;
+
+    border-left: 2px solid var(--brand-primary);
+
+    font-weight: var(--font-bold-weight);
+}
+
+.page-resumeSection-body{
+    padding-bottom: 30px;
+
+    border-bottom: 2px solid rgba(33, 125, 164, 0.8);
+}
+
+.page-resumeSection-body ul{
+    margin-bottom: 0;
+}
+
+.page-resumeSection-section:last-child .page-resumeSection-body{
+    padding-bottom: 0;
+
+    border-bottom: 0;
+}
+
+.experience-separator{
+    margin: 20px 0;
+    height: 1px;
+    width: 100%;
+    background-color: rgba(33, 125, 164, 0.1);
 }
 

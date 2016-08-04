@@ -2,7 +2,7 @@
     Highlight Menu
     Adds active class to menu based on slug and class
 #}
-{% macro is_active(segment, segmentNum, activeClass) %}{% if craft.request.getSegment(segmentNum) == segment %} {{activeClass}}{% endif %}{% endmacro %}
+{% macro is_active(segment, segmentNum, activeClass) %}{% if craft.request.getSegment(segmentNum) == segment %}{{activeClass}}{% endif %}{% endmacro %}
 
 {# Menus #}
 {% macro navigation(nav, classes, childClass, activeClass) %}
@@ -15,7 +15,7 @@
                 <a class="{{ link.slug }}{{ this.is_active(link.externalLink|trim('/'), 1, activeClass) }}" href="{{ link.externalLink }}"{% if link.linkNewWindow %} target="_blank"{% endif %}>{{ link.title }}</a>
             {% endif %}
             {% ifchildren %}
-                <ul class="{{childClass}} u-unstyledList">
+                <ul class="{{childClass}}">
                     {% children %}
                 </ul>
             {% endifchildren %}

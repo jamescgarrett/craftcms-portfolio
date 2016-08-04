@@ -94,7 +94,7 @@ textarea::-webkit-input-placeholder{
 textarea {
     height: auto;
     max-width: 100%;
-    min-height: 65px;
+    min-height: 150px;
     resize: vertical;
 }
 
@@ -111,6 +111,10 @@ label{
     margin-bottom: 5px;
 
     font-size: 1.3rem;
+}
+
+label em{
+    color: red;
 }
 
 fieldset{

@@ -1,0 +1,7 @@
+{% cache unless not craft.config.cache %}
+    {% for post in craft.entries.section('currentWork').limit(1) %}
+        <p class="currentCode-date">{{post.postDate|date('n.d.Y – g:iA')}}</p>
+        <p class="currentCode-text">{{"currently working with"|t}}</p>
+        <p class="currentCode-title">{{post.title}}</p>
+    {% endfor %}
+{% endcache %}
