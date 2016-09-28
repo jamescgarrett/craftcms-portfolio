@@ -5,6 +5,14 @@
     background-image: url('https://source.unsplash.com/collection/134120/1200x1400');
 }
 
+.currentCode--small{
+    display: none;
+    
+     @media (--screen-sm-min) {
+        display: block;
+    }
+}
+
 .currentCode p{
 	margin: 0;
 
@@ -25,5 +33,9 @@ p.currentCode-text{
 p.currentCode-title{
 	margin-bottom: 10px;
 
-	font-size: 3.6rem;
+    font-size: 2.6rem;
+
+    @media (--screen-sm-min) {
+        font-size: 3.6rem;
+    }
 }

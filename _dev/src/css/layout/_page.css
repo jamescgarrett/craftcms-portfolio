@@ -1,11 +1,23 @@
 .page-section--full{
-    height: 100vh;
+    height: auto;
+
+    @media (--screen-sm-min) {
+        height: 100vh;
+    }
 }
 .page-section--medium{
-    height: 65vh;
+    height: auto;
+
+    @media (--screen-sm-min) {
+        height: 65vh;
+    }
 }
 .page-section--small{
-    height: 45vh;
+    height: auto;
+
+    @media (--screen-sm-min) {
+        height: 45vh;
+    }
 }
 
 .page-currentCode{
@@ -14,13 +26,25 @@
     @mixin gradient-bg top, right, rgba(0, 62, 65, 0.7), rgba(0, 176, 255, 0.7);
 }
 .page-currentCode--full{
-    height: 100vh;
+    height: 50vh;
+
+    @media (--screen-sm-min) {
+        height: 100vh;
+    }
 }
 .page-currentCode--medium{
-    height: 65vh;
+    height: 50vh;
+
+    @media (--screen-sm-min) {
+        height: 65vh;
+    }
 }
 .page-currentCode--small{
-    height: 45vh;
+   height: 25vh;
+
+    @media (--screen-sm-min) {
+        height: 45vh;
+    }
 }
 
 .page-textColumn{
@@ -29,23 +53,63 @@
     background-color: var(--gray-darker);
 }
 .page-textColumn--full{
-    height: 100vh;
+    height: 50vh;
+
+    @media (--screen-sm-min) {
+        height: 100vh;
+    }
 }
 .page-textColumn--medium{
-    height: 65vh;
+    height: 50vh;
+
+    @media (--screen-sm-min) {
+        height: 65vh;
+    }
 }
 .page-textColumn--small{
-    height: 45vh;
+    height: 25vh;
+
+    @media (--screen-sm-min) {
+        height: 45vh;
+    }
 }
 
 .page-imageColumn--full{
-    height: 100vh;
+    height: 50vh;
+
+    @media (--screen-sm-min) {
+        height: 100vh;
+    }
 }
 .page-imageColumn--medium{
-    height: 65vh;
+    height: 50vh;
+
+    @media (--screen-sm-min) {
+        height: 65vh;
+    }
 }
 .page-imageColumn--small{
-    height: 45vh;
+    height: 20vh;
+
+    @media (--screen-sm-min) {
+        height: 45vh;
+    }
+}
+
+.page-textColumn-container{
+    border-bottom: 1px solid white;
+
+    @media (--screen-sm-min) {
+        border: none;
+    }
+}
+
+.page-imageColumn-container{
+    display: none;
+
+    @media (--screen-sm-min) {
+        display: block;
+    }
 }
 
 .page-textColumn-header{
@@ -100,27 +164,29 @@
 }
 
 .page-imageColumn--thule{
-    @mixin gradient-bg top, left, rgb(27, 46, 78), rgb(111, 150, 167);
+    @mixin gradient-bg top, left, #2C3E50, #4CA1AF;
+
+
 }
 
 .page-imageColumn--feliz-restaurants{
-    @mixin gradient-bg bottom, left, rgb(250, 142, 36), rgb(172, 8, 8);
+    @mixin gradient-bg bottom, left, #C02425, #F0CB35;
 }
 
 .page-imageColumn--invisible-sentinel{
-    @mixin gradient-bg top, left, rgb(12, 66, 122), rgb(32, 138, 143);
-}
-
-.page-imageColumn--timer{
-    @mixin gradient-bg top, left, rgb(255, 193, 91), rgb(255, 75, 75);
+    @mixin gradient-bg top, left, #1A2980, #26D0CE;
 }
 
 .page-imageColumn--placemedia{
-    @mixin gradient-bg top, left, rgb(86, 255, 106), rgb(0, 158, 229);
+    @mixin gradient-bg top, left, #185a9d, #43cea2;
+}
+
+.page-imageColumn--timer{
+    @mixin gradient-bg bottom, left, #e65245, #e43a15;
 }
 
 .page-imageColumn--orexo{
-    @mixin gradient-bg bottom, left, rgb(193, 0, 0), rgb(77, 0, 0);
+    @mixin gradient-bg bottom, left, #e52d27, #b31217;
 }
 
 .page-imageColumn--fatback{
@@ -128,11 +194,11 @@
 }
 
 .page-imageColumn--zubsolv{
-    @mixin gradient-bg top, right, rgb(61, 0, 82), rgb(249, 146, 39);
+    @mixin gradient-bg top, right, #A83279, #D38312 ;
 }
 
-.page-imageColumn--cellar{
-    @mixin gradient-bg top, left, rgb(137, 93, 0), rgb(255, 191, 54);
+.page-imageColumn--cellars{
+    @mixin gradient-bg top, left, #ffb347, #ffcc33;
 }
 
 .page-imageColumn--social-feeds{
@@ -150,6 +216,17 @@
 
 .page-textSection-body{
     text-align: left;
+}
+
+.page-imagesSection-container{
+    margin-bottom: 50px;
+
+    @media (--screen-sm-min) {
+        margin-bottom: 0;
+    }
+}
+.page-imagesSection-container:last-child{
+    margin-bottom: 0;
 }
 
 .page-imagesSection{
@@ -173,12 +250,14 @@
 }
 
 .page-resumeSection-title{
-    margin-left: 100px;
-    padding-left: 20px;
-
-    border-left: 2px solid var(--brand-primary);
-
     font-weight: var(--font-bold-weight);
+
+    @media (--screen-md-min) {
+        margin-left: 100px;
+        padding-left: 20px;
+
+        border-left: 2px solid var(--brand-primary);
+    }
 }
 
 .page-resumeSection-body{

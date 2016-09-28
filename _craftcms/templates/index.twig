@@ -4,14 +4,16 @@
     <div class="page">
 
         <div class="page-section page-section--full row row--middle row--center row--nomargin">
+            
             <div class="currentCode col--12 col--6sm">
                 <div class="page-currentCode page-currentCode--full row row--middle row--center row--nomargin">
-                    <div class="col--12 col--7sm col--5md col--4lg">
+                    <div class="col--7 col--5md col--4lg">
                          {% include '_includes/current-code' %}
                     </div>
                 </div>
             </div>
-            <div class="col--12 col--6sm">
+           
+            <div class="col--12 col--6sm col--first col--lastsm">
                 <div class="page-textColumn page-textColumn--full row row--middle row--center row--nomargin">
                     <div class="col--7">
                         <div class="page-textColumn-header">
@@ -26,7 +28,7 @@
         {% cache unless not craft.config.cache %}
             {% for post in craft.entries.section('work') %}
                 <div class="page-section page-section--middle row row--nomargin">
-                    <div class="col--12 col--6sm{%if loop.index is even %} col--lastsm{% endif %}">
+                    <div class="col--12 col--6sm{%if loop.index is even %} col--last{% endif %} page-textColumn-container">
                         <div class="page-textColumn page-textColumn--medium row row--middle row--center row--nomargin">
                             <div class="col--7">
                                 <div class="page-textColumn-header">
@@ -40,9 +42,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col--12 col--6sm{%if loop.index is even %} col--firstsm{% endif %}">
+                    <div class="col--12 col--6sm{%if loop.index is even %} col--first{% endif %} page-imageColumn-container">
                         <div class="page-imageColumn page-imageColumn--medium page-imageColumn--{{macros.lowercase_replace_space(post.title)}} row row--center row--middle row--nomargin">
-                            <div class="col--12 col--8sm">
+                            <div class="col--10 col--6xs col--8sm">
                                 <div class="page-imageColumn-image">
                                     {% set image  = post.thumbnail.first() %}
                                     {% if image %}

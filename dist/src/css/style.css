@@ -2502,6 +2502,7 @@ th {
     margin-left: -0.1em;
     margin-bottom: 20px;
 }
+.row:last-child{ margin-bottom: 0; }
 .row--marginhalf{ margin-bottom: 10px; }
 .row--nomargin{ margin-bottom: 0; }
 .row--nogutter{ margin-left: 0; margin-right: 0; }
@@ -2552,8 +2553,8 @@ th {
 .col--11{ -ms-flex-preferred-size: 91.667%; flex-basis: 91.667%; max-width: 91.667%; }
 .col--12{ -ms-flex-preferred-size: 100%; flex-basis: 100%; max-width: 100%; }
 .col--nogutter{ padding-left: 0; padding-right: 0; }
-.col--paddingright{ padding-right: 0.2em; }
-.col--paddingleft{ padding-left: 0.2em; }
+.col--paddingright{ padding-right: 0.3em; }
+.col--paddingleft{ padding-left: 0.3em; }
 .col--first{ -webkit-box-ordinal-group: 0; -ms-flex-order: -1; order: -1; }
 .col--last{ -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; }
 @media (min-width: 33.750em) {
@@ -2603,8 +2604,8 @@ th {
     .col--12xs{ -ms-flex-preferred-size: 100%; flex-basis: 100%; max-width: 100%; }
 
     .col--nogutterxs{ padding-left: 0; padding-right: 0; }
-    .col--paddingrightxs{ padding-right: 0.2em; }
-    .col--paddingleftxs{ padding-left: 0.2em; }
+    .col--paddingrightxs{ padding-right: 0.3em; }
+    .col--paddingleftxs{ padding-left: 0.3em; }
     .col--firstxs{ -webkit-box-ordinal-group: 0; -ms-flex-order: -1; order: -1; }
     .col--lastxs{ -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; }
 }
@@ -2655,8 +2656,8 @@ th {
     .col--12sm{ -ms-flex-preferred-size: 100%; flex-basis: 100%; max-width: 100%; }
 
     .col--noguttersm{ padding-left: 0; padding-right: 0; }
-    .col--paddingrightsm{ padding-right: 0.2em; }
-    .col--paddingleftsm{ padding-left: 0.2em; }
+    .col--paddingrightsm{ padding-right: 0.3em; }
+    .col--paddingleftsm{ padding-left: 0.3em; }
     .col--firstsm{ -webkit-box-ordinal-group: 0; -ms-flex-order: -1; order: -1; }
     .col--lastsm{ -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; }
 }
@@ -2707,8 +2708,8 @@ th {
     .col--12md{ -ms-flex-preferred-size: 100%; flex-basis: 100%; max-width: 100%; }
 
     .col--noguttermd{ padding-left: 0; padding-right: 0; }
-    .col--paddingrightmd{ padding-right: 0.2em; }
-    .col--paddingleftmd{ padding-left: 0.2em; }
+    .col--paddingrightmd{ padding-right: 0.3em; }
+    .col--paddingleftmd{ padding-left: 0.3em; }
     .col--firstmd{ -webkit-box-ordinal-group: 0; -ms-flex-order: -1; order: -1; }
     .col--lastmd{ -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; }
 }
@@ -2759,8 +2760,8 @@ th {
     .col--12lg{ -ms-flex-preferred-size: 100%; flex-basis: 100%; max-width: 100%; }
 
     .col--nogutterlg{ padding-left: 0; padding-right: 0; }
-    .col--paddingrightlg{ padding-right: 0.2em; }
-    .col--paddingleftlg{ padding-left: 0.2em; }
+    .col--paddingrightlg{ padding-right: 0.3em; }
+    .col--paddingleftlg{ padding-left: 0.3em; }
     .col--firstlg{ -webkit-box-ordinal-group: 0; -ms-flex-order: -1; order: -1; }
     .col--lastlg{ -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; }
 }
@@ -3293,14 +3294,29 @@ img {
     color: rgb(33, 125, 164);
 }
 .page-section--full{
+    height: auto
+}
+@media (min-width: 48em) {
+  .page-section--full {
     height: 100vh;
-}
+  }
+    }
 .page-section--medium{
+    height: auto
+}
+@media (min-width: 48em) {
+  .page-section--medium {
     height: 65vh;
-}
+  }
+    }
 .page-section--small{
-    height: 45vh;
+    height: auto
 }
+@media (min-width: 48em) {
+  .page-section--small {
+    height: 45vh;
+  }
+    }
 .page-currentCode{
     padding-top: 20px;
 
@@ -3321,37 +3337,98 @@ img {
     /* Standard syntax */
 }
 .page-currentCode--full{
+    height: 50vh
+}
+@media (min-width: 48em) {
+  .page-currentCode--full {
     height: 100vh;
-}
+  }
+    }
 .page-currentCode--medium{
+    height: 50vh
+}
+@media (min-width: 48em) {
+  .page-currentCode--medium {
     height: 65vh;
-}
+  }
+    }
 .page-currentCode--small{
-    height: 45vh;
+   height: 25vh
 }
+@media (min-width: 48em) {
+  .page-currentCode--small {
+    height: 45vh;
+  }
+    }
 .page-textColumn{
     padding-top: 20px;
 
     background-color: rgb(24, 24, 24);
 }
 .page-textColumn--full{
-    height: 100vh;
+    height: 50vh
 }
+@media (min-width: 48em) {
+  .page-textColumn--full {
+    height: 100vh;
+  }
+    }
 .page-textColumn--medium{
-    height: 65vh;
+    height: 50vh
 }
+@media (min-width: 48em) {
+  .page-textColumn--medium {
+    height: 65vh;
+  }
+    }
 .page-textColumn--small{
-    height: 45vh;
+    height: 25vh
 }
+@media (min-width: 48em) {
+  .page-textColumn--small {
+    height: 45vh;
+  }
+    }
 .page-imageColumn--full{
+    height: 50vh
+}
+@media (min-width: 48em) {
+  .page-imageColumn--full {
     height: 100vh;
-}
+  }
+    }
 .page-imageColumn--medium{
+    height: 50vh
+}
+@media (min-width: 48em) {
+  .page-imageColumn--medium {
     height: 65vh;
-}
+  }
+    }
 .page-imageColumn--small{
-    height: 45vh;
+    height: 20vh
 }
+@media (min-width: 48em) {
+  .page-imageColumn--small {
+    height: 45vh;
+  }
+    }
+.page-textColumn-container{
+    border-bottom: 1px solid white
+}
+@media (min-width: 48em) {
+  .page-textColumn-container {
+    border: none;
+  }
+    }
+.page-imageColumn-container{
+    display: none
+}
+@media (min-width: 48em) {
+  .page-imageColumn-container {
+    display: block;
+  }
+    }
 .page-textColumn-header{
     padding-left: 30px;
 
@@ -3399,63 +3476,65 @@ img {
     text-decoration: none;
 }
 .page-imageColumn--thule{
-    background: rgb(27, 46, 78);
+    background: #2C3E50;
     /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(top left, rgb(27, 46, 78), rgb(111, 150, 167));
+    background: -webkit-linear-gradient(top left, #2C3E50, #4CA1AF);
     /* For Safari 5.1 to 6.0 */
     /* For Opera 11.1 to 12.0 */
     /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to top left, rgb(27, 46, 78), rgb(111, 150, 167));
+    background: linear-gradient(to top left, #2C3E50, #4CA1AF);
     /* Standard syntax */
+
+
 }
 .page-imageColumn--feliz-restaurants{
-    background: rgb(250, 142, 36);
+    background: #C02425;
     /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(bottom left, rgb(250, 142, 36), rgb(172, 8, 8));
+    background: -webkit-linear-gradient(bottom left, #C02425, #F0CB35);
     /* For Safari 5.1 to 6.0 */
     /* For Opera 11.1 to 12.0 */
     /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to bottom left, rgb(250, 142, 36), rgb(172, 8, 8));
+    background: linear-gradient(to bottom left, #C02425, #F0CB35);
     /* Standard syntax */
 }
 .page-imageColumn--invisible-sentinel{
-    background: rgb(12, 66, 122);
+    background: #1A2980;
     /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(top left, rgb(12, 66, 122), rgb(32, 138, 143));
+    background: -webkit-linear-gradient(top left, #1A2980, #26D0CE);
     /* For Safari 5.1 to 6.0 */
     /* For Opera 11.1 to 12.0 */
     /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to top left, rgb(12, 66, 122), rgb(32, 138, 143));
-    /* Standard syntax */
-}
-.page-imageColumn--timer{
-    background: rgb(255, 193, 91);
-    /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(top left, rgb(255, 193, 91), rgb(255, 75, 75));
-    /* For Safari 5.1 to 6.0 */
-    /* For Opera 11.1 to 12.0 */
-    /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to top left, rgb(255, 193, 91), rgb(255, 75, 75));
+    background: linear-gradient(to top left, #1A2980, #26D0CE);
     /* Standard syntax */
 }
 .page-imageColumn--placemedia{
-    background: rgb(86, 255, 106);
+    background: #185a9d;
     /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(top left, rgb(86, 255, 106), rgb(0, 158, 229));
+    background: -webkit-linear-gradient(top left, #185a9d, #43cea2);
     /* For Safari 5.1 to 6.0 */
     /* For Opera 11.1 to 12.0 */
     /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to top left, rgb(86, 255, 106), rgb(0, 158, 229));
+    background: linear-gradient(to top left, #185a9d, #43cea2);
+    /* Standard syntax */
+}
+.page-imageColumn--timer{
+    background: #e65245;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(bottom left, #e65245, #e43a15);
+    /* For Safari 5.1 to 6.0 */
+    /* For Opera 11.1 to 12.0 */
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom left, #e65245, #e43a15);
     /* Standard syntax */
 }
 .page-imageColumn--orexo{
-    background: rgb(193, 0, 0);
+    background: #e52d27;
     /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(bottom left, rgb(193, 0, 0), rgb(77, 0, 0));
+    background: -webkit-linear-gradient(bottom left, #e52d27, #b31217);
     /* For Safari 5.1 to 6.0 */
     /* For Opera 11.1 to 12.0 */
     /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to bottom left, rgb(193, 0, 0), rgb(77, 0, 0));
+    background: linear-gradient(to bottom left, #e52d27, #b31217);
     /* Standard syntax */
 }
 .page-imageColumn--fatback{
@@ -3469,23 +3548,23 @@ img {
     /* Standard syntax */
 }
 .page-imageColumn--zubsolv{
-    background: rgb(61, 0, 82);
+    background: #A83279;
     /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(top right, rgb(61, 0, 82), rgb(249, 146, 39));
+    background: -webkit-linear-gradient(top right, #A83279, #D38312);
     /* For Safari 5.1 to 6.0 */
     /* For Opera 11.1 to 12.0 */
     /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to top right, rgb(61, 0, 82), rgb(249, 146, 39));
+    background: linear-gradient(to top right, #A83279, #D38312);
     /* Standard syntax */
 }
-.page-imageColumn--cellar{
-    background: rgb(137, 93, 0);
+.page-imageColumn--cellars{
+    background: #ffb347;
     /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(top left, rgb(137, 93, 0), rgb(255, 191, 54));
+    background: -webkit-linear-gradient(top left, #ffb347, #ffcc33);
     /* For Safari 5.1 to 6.0 */
     /* For Opera 11.1 to 12.0 */
     /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to top left, rgb(137, 93, 0), rgb(255, 191, 54));
+    background: linear-gradient(to top left, #ffb347, #ffcc33);
     /* Standard syntax */
 }
 .page-imageColumn--social-feeds{
@@ -3514,6 +3593,17 @@ img {
 .page-textSection-body{
     text-align: left;
 }
+.page-imagesSection-container{
+    margin-bottom: 50px
+}
+@media (min-width: 48em) {
+  .page-imagesSection-container {
+    margin-bottom: 0;
+  }
+    }
+.page-imagesSection-container:last-child{
+    margin-bottom: 0;
+}
 .page-imagesSection{
     padding-top: 55px;
     padding-bottom: 55px;
@@ -3531,13 +3621,15 @@ img {
     text-align: left;
 }
 .page-resumeSection-title{
+    font-weight: 700
+}
+@media (min-width: 64em) {
+  .page-resumeSection-title {
     margin-left: 100px;
     padding-left: 20px;
-
     border-left: 2px solid rgb(33, 125, 164);
-
-    font-weight: 700;
-}
+  }
+    }
 .page-resumeSection-body{
     padding-bottom: 30px;
 
@@ -3567,6 +3659,14 @@ img {
 	background-position: center;
     background-image: url('https://source.unsplash.com/collection/134120/1200x1400');
 }
+.currentCode--small{
+    display: none
+}
+@media (min-width: 48em) {
+  .currentCode--small {
+    display: block;
+  }
+    }
 .currentCode p{
 	margin: 0;
 
@@ -3586,9 +3686,14 @@ p.currentCode-text{
 p.currentCode-title{
 	margin-bottom: 10px;
 
-	font-size: 36px;
-	font-size: 3.6rem;
+    font-size: 26px;
+    font-size: 2.6rem
 }
+@media (min-width: 48em) {
+  p.currentCode-title {
+    font-size: 3.6rem;
+  }
+    }
 .navToggle{
     -webkit-transition: .5s ease-in-out;
     transition: .5s ease-in-out;

@@ -4,14 +4,14 @@
     {% cache unless not craft.config.cache %}
         <div class="page">
             <div class="page-section page-section--small row row--middle row--center row--nomargin">
-                <div class="currentCode col--12 col--6sm">
+                <div class="currentCode currentCode--small col--12 col--6sm">
                     <div class="page-currentCode page-currentCode--small row row--middle row--center row--nomargin">
-                        <div class="col--12 col--7sm col--5md col--4lg">
+                        <div class="col--7 col--5md col--4lg">
                             {% include '_includes/current-code' %}
                         </div>
                     </div>
                 </div>
-                <div class="col--12 col--6sm">
+                <div class="col--12 col--6sm col--first col--lastsm">
                     <div class="page-textColumn page-textColumn--small row row--middle row--center row--nomargin">
                         <div class="col--7">
                             <div class="page-textColumn-header">
@@ -32,7 +32,7 @@
 
                     {% case 'blockBody' %}
                         <div class="page-textSection row row--center row--nomargin">
-                            <div class="col--12 col--6sm">
+                            <div class="col--10 col--6sm">
                                 <div class="page-textSection-body">
                                     {{block.body}}
                                     {% if block.showSocial %}
@@ -75,10 +75,10 @@
                 <div class="page-resumeSection">
                     {% for section in entry.resumeSection %}
                         <div class="page-resumeSection-section row row--center row--nomargin">
-                            <div class="col--3">
+                            <div class="col--10 col--3md">
                                 <p class="page-resumeSection-title">{{section.sectionTitle}}</p>
                             </div>
-                            <div class="page-resumeSection-body col--6">
+                            <div class="page-resumeSection-body col--10 col--6md">
                                 {{section.body}}
                             </div>
                         </div>

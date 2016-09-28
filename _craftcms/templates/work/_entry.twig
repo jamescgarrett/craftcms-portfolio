@@ -4,7 +4,7 @@
     {% cache unless not craft.config.cache %}
         <div class="page">
             <div class="page-section page-section--full row row--nomargin">
-                <div class="col--12 col--6sm">
+                <div class="col--12 col--6sm page-imageColumn-container">
                     <div class="page-imageColumn page-imageColumn--full page-imageColumn--{{macros.lowercase_replace_space(entry.title)}} row row--middle row--center row--nomargin">
                         <div class="col--12 col--8sm">
                             <div class="page-imageColumn-image">
@@ -41,7 +41,7 @@
 
                     {% case 'blockBody' %}
                         <div class="page-textSection row row--center row--nomargin">
-                            <div class="col--12 col--6sm">
+                            <div class="col--10 col--6sm">
                                 <div class="page-textSection-body">
                                     {{block.body}}
                                 </div>
@@ -51,7 +51,7 @@
                     {% case 'blockHalfImages' %}
                         <div class="page-imagesSection row row--center row--nomargin">
                             {% for image in block.images %}
-                                <div class="col--12 col--6sm">
+                                <div class="col--12 col--6sm page-imagesSection-container">
                                     <div class="page-imagesSection-image">
                                         {{ macros.responsive_image(image, {transformMode: 'fit' }) }}
                                     </div>
